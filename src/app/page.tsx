@@ -4,6 +4,7 @@ import Marquee from "@/components/Marquee";
 import ProjectCard from "@/components/ProjectCard";
 import { ArrowDownRight } from "lucide-react";
 import Link from "next/link";
+import ForceScrollToTop from "@/components/ForceScrollToTop";
 
 export default async function Home() {
   const portfolioData = await getDictionary();
@@ -24,6 +25,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col w-full overflow-hidden">
+      <ForceScrollToTop />
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[700px] flex flex-col justify-center px-6 md:px-12 pt-20">
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
