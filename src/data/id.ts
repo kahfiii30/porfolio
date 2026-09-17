@@ -298,4 +298,106 @@ Tetapi saya lebih suka belajar dengan cara membangun sesuatu.`,
     github: "https://github.com/kahfiii30",
     location: ["Samarinda", "Kalimantan Timur", "Indonesia"],
   },
+  labSection: {
+    title: "THE LAB.",
+    subtitle: "Hal-hal yang saya bangun untuk memahami apa yang akan datang selanjutnya."
+  },
+  labPages: {
+    aiAutomation: {
+      title: "OTOMATISASI AI",
+      subtitle: "Menggunakan otomatisasi untuk mengurangi pekerjaan berulang dan menghubungkan berbagai alat.",
+      section1Title: "01 / Konsep",
+      section1Text: "Saya mengeksplorasi otomatisasi AI bukan sebagai insinyur perangkat lunak perusahaan, melainkan sebagai pemasar dan operator yang ingin menyelesaikan hambatan sehari-hari.\n\nFokus utamanya adalah pada alur kerja pragmatis: mengambil data dari satu tempat, memprosesnya dengan AI untuk mengekstrak makna, dan merutekannya ke tempat yang dibutuhkan—baik itu ke dashboard, aplikasi pesan, atau jadwal konten.",
+      section2Title: "02 / Alat & Eksplorasi",
+      tools: [
+        { name: "Alur Kerja n8n", desc: "Membangun otomatisasi berbasis node kustom untuk menghubungkan API eksternal, mengelola webhook, dan memicu tugas latar belakang tanpa skrip manual yang berat." },
+        { name: "Telegram & WhatsApp", desc: "Membuat konsep alur kerja di mana notifikasi, ringkasan data, dan tindakan cepat diarahkan langsung ke aplikasi pesan untuk visibilitas operasional instan." },
+        { name: "Agen AI", desc: "Bereksperimen dengan agen otonom yang dapat menafsirkan permintaan pengguna yang ambigu, mengeksekusi logika multi-langkah, dan memformat data untuk kasus penggunaan bisnis." },
+        { name: "Otomatisasi Konten", desc: "Jalur kerja (pipelines) yang mengambil tren, mengumpulkan wawasan, dan menghasilkan draf untuk mempercepat proses kreatif, bukan untuk menggantikannya sepenuhnya." }
+      ],
+      next: "Produk Digital"
+    },
+    digitalProducts: {
+      title: "PRODUK DIGITAL",
+      subtitle: "Mengubah ide menjadi alat digital yang bisa digunakan dan bereksperimen dengan antarmuka.",
+      projects: [
+        {
+          title: "WealthPilot",
+          idea: "Visualisasi keuangan pribadi.",
+          problem: "Sebagian besar aplikasi keuangan terlalu rumit (seperti spreadsheet) atau terlalu sederhana. Pengguna kesulitan memahami nilai kekayaan bersih dan tren arus kas mereka yang sebenarnya.",
+          solution: "Dashboard fintech mode gelap yang ramping yang secara otomatis memvisualisasikan kekayaan bersih, mengkategorikan pengeluaran, dan menyoroti tren 6 bulan.",
+          tech: "React, Next.js, Desain UI/UX",
+          learned: "Merancang dashboard data yang padat membutuhkan hierarki tipografi yang ketat dan palet warna yang sangat terbatas untuk menghindari kesan berlebihan bagi pengguna."
+        },
+        {
+          title: "Sampride",
+          idea: "Daftar periksa produktivitas minimalis.",
+          problem: "Aplikasi to-do tradisional memperkenalkan terlalu banyak hambatan dengan tenggat waktu, tag, dan folder, menyebabkan pengguna mengabaikannya.",
+          solution: "Daftar periksa bebas hambatan dan premium secara visual yang berfokus hanya pada apa yang perlu dilakukan hari ini, tanpa perlu pengaturan.",
+          tech: "Teknologi Web, Desain Antarmuka",
+          learned: "Mengurangi fitur seringkali jauh lebih sulit daripada menambahkannya. Nuansa premium berasal dari ruang kosong (whitespace) yang luas dan interaksi yang cair, bukan fungsionalitas yang kompleks."
+        },
+        {
+          title: "Kahfi Audit Marketing",
+          idea: "Diagnosis bisnis interaktif.",
+          problem: "Bisnis kecil tahu bahwa mereka membutuhkan pemasaran, tetapi mereka tidak tahu di mana hambatan sebenarnya (Penawaran? Konten? Distribusi?).",
+          solution: "Alat penilaian interaktif yang memandu pemilik melalui perjalanan pelanggan mereka, menghasilkan diagnosis visual yang jelas.",
+          tech: "Pemetaan Strategi, Arsitektur Web",
+          learned: "Membingkai pemasaran sebagai alur kerja sistemik daripada sekadar 'membuat konten' mengubah cara klien memandang nilai layanan tersebut."
+        }
+      ],
+      next: "Sistem Pemasaran"
+    },
+    marketingSystems: {
+      title: "SISTEM PEMASARAN",
+      subtitle: "Menghubungkan strategi, konten, corong (funnel), dan eksekusi menjadi mesin yang dapat diprediksi.",
+      section1Title: "01 / Konsep",
+      section1Text: "Sebagian besar bisnis memandang pemasaran sebagai \"sekadar memposting konten\". Pandangan terfragmentasi ini sering kali menyebabkan upaya tinggi dengan hasil yang rendah.\n\nPemasaran adalah sebuah sistem. Jika penawarannya lemah, konten tidak akan menyelamatkannya. Jika distribusinya salah, penawarannya tidak akan terlihat. Jika tindak lanjutnya rusak, prospek tidak akan menjadi penjualan.",
+      workflow: [
+        { step: "RISET", desc: "Memahami celah pasar." },
+        { step: "POSITIONING", desc: "Mendefinisikan mengapa mereka harus peduli." },
+        { step: "PENAWARAN", desc: "Menyusun nilai yang tak tertahankan." },
+        { step: "KONTEN", desc: "Mengkomunikasikan penawaran secara visual." },
+        { step: "DISTRIBUSI", desc: "Membuat orang melihat konten tersebut." },
+        { step: "KONVERSI", desc: "Mengubah perhatian menjadi tindakan." },
+        { step: "TINDAK LANJUT", desc: "Merawat prospek menjadi pelanggan." },
+        { step: "ANALISIS", desc: "Mengukur apa yang benar-benar berhasil." }
+      ],
+      section2Title: "02 / Titik Sentuh Terhubung",
+      section2Text: "Sistem membutuhkan koneksi beberapa titik sentuh digital secara mulus sehingga pelanggan tidak pernah merasa tersesat.\nPendekatan ini merupakan inti dari kerangka kerja yang digunakan dalam Kahfi Audit Marketing.",
+      touchpoints: ["Google Maps", "Instagram", "WhatsApp", "Website", "Marketplace"],
+      next: "Meta Ads & Performa"
+    },
+    metaAds: {
+      title: "META ADS\n& PERFORMA\nMARKETING",
+      subtitle: "Saya menggunakan Meta Ads tidak hanya untuk \"menjalankan iklan\", tetapi untuk memahami bagaimana materi kreatif, audiens, penawaran, dan corong bekerja sama.\n\nTujuannya adalah untuk menemukan apa yang berhasil, memahami mengapa itu berhasil, dan meningkatkannya melalui pengujian.",
+      capabilitiesTitle: "Kapabilitas",
+      capabilities: [
+        { num: "01", title: "STRUKTUR KAMPANYE", items: ["Pengaturan kampanye", "Struktur Ad Set", "Pengorganisasian kreatif iklan", "Alokasi anggaran", "Pemilihan objektif"] },
+        { num: "02", title: "AUDIENS", items: ["Audiens luas", "Penargetan minat", "Audiens kustom", "Penargetan ulang", "Konsep audiens serupa (Lookalike)"] },
+        { num: "03", title: "PENGUJIAN KREATIF", items: ["Hooks", "Sudut pandang kreatif", "Iklan statis", "Iklan video", "Pengujian penawaran", "Pengujian CTA"] },
+        { num: "04", title: "ANALISIS PERFORMA", items: ["CTR", "CPM", "CPC", "Biaya per hasil", "Konversi", "ROAS"] }
+      ],
+      workflowTitle: "Alur Kerja",
+      workflow: ["TUJUAN BISNIS", "AUDIENS", "PENAWARAN", "KREATIF", "META ADS", "DATA", "ITERASI"],
+      philosophyQuote: "\"IKLAN YANG BAGUS BUKAN\nHANYA TENTANG PENARGETAN.\n\nKREATIF, PENAWARAN,\nDAN PELANGGAN\nSAMA PENTINGNYA.\"",
+      philosophyText: "Performance marketing bekerja paling baik ketika periklanan terhubung ke seluruh perjalanan pelanggan.",
+      next: "Eksperimen Web"
+    },
+    webExperiments: {
+      title: "EKSPERIMEN WEB",
+      subtitle: "Belajar dengan cara membangun dan meluncurkan karya. Mengeksplorasi irisan antara desain, kode, dan produk.",
+      section1Title: "01 / Pendekatan",
+      section1Text: "Saya bukan seorang insinyur perangkat lunak senior, dan saya tidak berpura-pura menjadi satu.\n\nPendekatan saya terhadap pengembangan web murni didorong oleh eksperimen: memiliki ide, membuka editor, memanfaatkan AI untuk menjembatani kesenjangan teknis, dan meluncurkan sesuatu yang berfungsi.\n\nIni memungkinkan saya untuk membuat prototipe ide dengan cepat, menguji hipotesis pemasaran di dunia nyata, dan memahami batasan teknis dari produk yang saya pasarkan.",
+      section2Title: "02 / Teknologi (Stack)",
+      tools: [
+        { name: "GitHub", use: "Kontrol versi dan pipeline penerapan." },
+        { name: "Vercel", use: "Hosting, edge functions, dan analitik." },
+        { name: "Next.js", use: "Framework React untuk aplikasi tingkat produksi." },
+        { name: "Supabase", use: "Backend as a Service, PostgreSQL, dan autentikasi." },
+        { name: "Asisten AI", use: "Mempercepat pengembangan, debugging, dan pencarian ide." }
+      ],
+      next: "Otomatisasi AI"
+    }
+  }
 };

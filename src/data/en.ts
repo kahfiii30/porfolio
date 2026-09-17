@@ -298,4 +298,106 @@ But I prefer learning by building.`,
     github: "https://github.com/kahfiii30",
     location: ["Samarinda", "East Kalimantan", "Indonesia"],
   },
+  labSection: {
+    title: "THE LAB.",
+    subtitle: "Things I build to understand what comes next."
+  },
+  labPages: {
+    aiAutomation: {
+      title: "AI AUTOMATION",
+      subtitle: "Using automation to reduce repetitive work and connect tools together.",
+      section1Title: "01 / Concept",
+      section1Text: "I explore AI automation not as an enterprise software engineer, but as a marketer and operator looking to solve daily friction.\n\nThe focus is on pragmatic workflows: taking data from one place, processing it with AI to extract meaning, and routing it to where it needs to be—whether that's a dashboard, a messaging app, or a content schedule.",
+      section2Title: "02 / Tools & Explorations",
+      tools: [
+        { name: "n8n Workflows", desc: "Building custom node-based automations to connect external APIs, manage webhooks, and trigger background tasks without heavy manual scripting." },
+        { name: "Telegram & WhatsApp", desc: "Creating workflow concepts where notifications, data summaries, and quick actions are routed directly to messaging apps for instant operational visibility." },
+        { name: "AI Agents", desc: "Experimenting with autonomous agents that can interpret ambiguous user requests, execute multi-step logic, and format data for business use cases." },
+        { name: "Content Automation", desc: "Pipelines that scrape trends, aggregate insights, and generate drafts to accelerate the creative process, rather than replace it completely." }
+      ],
+      next: "Digital Products"
+    },
+    digitalProducts: {
+      title: "DIGITAL PRODUCTS",
+      subtitle: "Turning ideas into usable digital tools and interface experiments.",
+      projects: [
+        {
+          title: "WealthPilot",
+          idea: "Personal finance visualization.",
+          problem: "Most finance apps are either too complex (like a spreadsheet) or too simple. Users struggle to understand their true net worth and cash flow trend.",
+          solution: "A sleek, dark-mode fintech dashboard that automatically visualizes net worth, categorizes expenses, and highlights 6-month trends.",
+          tech: "React, Next.js, UI/UX Design",
+          learned: "Designing dense data dashboards requires strict typography hierarchy and extremely constrained color palettes to avoid overwhelming the user."
+        },
+        {
+          title: "Sampride",
+          idea: "Minimalist productivity checklist.",
+          problem: "Traditional to-do apps introduce too much friction with due dates, tags, and folders, causing users to abandon them.",
+          solution: "A frictionless, visually premium checklist that focuses solely on what needs to be done today, with zero setup required.",
+          tech: "Web Technologies, Interface Design",
+          learned: "Subtracting features is often much harder than adding them. The premium feel comes from generous whitespace and fluid interaction, not complex functionality."
+        },
+        {
+          title: "Kahfi Audit Marketing",
+          idea: "Interactive business diagnosis.",
+          problem: "Small businesses know they need marketing, but they don't know where their actual bottleneck is (Offer? Content? Distribution?).",
+          solution: "An interactive assessment tool that guides owners through their customer journey, outputting a clear visual diagnosis.",
+          tech: "Strategy mapping, Web Architecture",
+          learned: "Framing marketing as a systemic workflow rather than 'just making content' changes how clients perceive the value of the service."
+        }
+      ],
+      next: "Marketing Systems"
+    },
+    marketingSystems: {
+      title: "MARKETING SYSTEMS",
+      subtitle: "Connecting strategy, content, funnel, and execution into a predictable engine.",
+      section1Title: "01 / The Concept",
+      section1Text: "Most businesses view marketing as \"just posting content\". This fragmented view often leads to high effort with low return.\n\nMarketing is a system. If the offer is weak, the content won't save it. If the distribution is wrong, the offer won't be seen. If the follow-up is broken, the leads won't close.",
+      workflow: [
+        { step: "RESEARCH", desc: "Understanding the market gap." },
+        { step: "POSITIONING", desc: "Defining why they should care." },
+        { step: "OFFER", desc: "Crafting the irresistible value." },
+        { step: "CONTENT", desc: "Communicating the offer visually." },
+        { step: "DISTRIBUTION", desc: "Getting eyeballs on the content." },
+        { step: "CONVERSION", desc: "Turning attention into action." },
+        { step: "FOLLOW-UP", desc: "Nurturing leads into customers." },
+        { step: "ANALYSIS", desc: "Measuring what actually works." }
+      ],
+      section2Title: "02 / Connected Touchpoints",
+      section2Text: "A system requires connecting multiple digital touchpoints seamlessly so the customer never feels lost.\nThis approach is central to the framework used in Kahfi Audit Marketing.",
+      touchpoints: ["Google Maps", "Instagram", "WhatsApp", "Website", "Marketplace"],
+      next: "Meta Ads & Performance"
+    },
+    metaAds: {
+      title: "META ADS\n& PERFORMANCE\nMARKETING",
+      subtitle: "I use Meta Ads not only to \"run ads\", but to understand how creative, audience, offer, and funnel work together.\n\nThe goal is to find what works, understand why it works, and improve it through testing.",
+      capabilitiesTitle: "Capabilities",
+      capabilities: [
+        { num: "01", title: "CAMPAIGN STRUCTURE", items: ["Campaign setup", "Ad Set structure", "Ad creative organization", "Budget allocation", "Objective selection"] },
+        { num: "02", title: "AUDIENCE", items: ["Broad audience", "Interest targeting", "Custom audiences", "Retargeting", "Lookalike audience concepts"] },
+        { num: "03", title: "CREATIVE TESTING", items: ["Hooks", "Creative angles", "Static ads", "Video ads", "Offer testing", "CTA testing"] },
+        { num: "04", title: "PERFORMANCE ANALYSIS", items: ["CTR", "CPM", "CPC", "Cost per result", "Conversion", "ROAS"] }
+      ],
+      workflowTitle: "The Workflow",
+      workflow: ["BUSINESS GOAL", "AUDIENCE", "OFFER", "CREATIVE", "META ADS", "DATA", "ITERATION"],
+      philosophyQuote: "\"GOOD ADS ARE NOT\nJUST ABOUT TARGETING.\n\nTHE CREATIVE,\nOFFER AND CUSTOMER\nMATTER JUST AS MUCH.\"",
+      philosophyText: "Performance marketing works best when advertising is connected to the entire customer journey.",
+      next: "Web Experiments"
+    },
+    webExperiments: {
+      title: "WEB EXPERIMENTS",
+      subtitle: "Learning by building and shipping. Exploring the intersection of design, code, and product.",
+      section1Title: "01 / The Approach",
+      section1Text: "I am not a senior software engineer, nor do I pretend to be one.\n\nMy approach to web development is purely driven by experimentation: having an idea, opening an editor, utilizing AI to bridge technical gaps, and shipping something that works.\n\nThis allows me to rapidly prototype ideas, test marketing hypotheses in the real world, and understand the technical constraints of the products I market.",
+      section2Title: "02 / The Stack",
+      tools: [
+        { name: "GitHub", use: "Version control and deployment pipelines." },
+        { name: "Vercel", use: "Hosting, edge functions, and analytics." },
+        { name: "Next.js", use: "React framework for production-grade applications." },
+        { name: "Supabase", use: "Backend as a Service, PostgreSQL, and authentication." },
+        { name: "AI Assistants", use: "Accelerating development, debugging, and ideation." }
+      ],
+      next: "AI Automation"
+    }
+  }
 };

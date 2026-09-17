@@ -207,13 +207,13 @@ export default async function Home() {
         <div className="container mx-auto">
           <div className="mb-16">
             <AnimatedText 
-              text="THE LAB." 
+              text={portfolioData.labSection.title} 
               as="h2"
               className="text-5xl md:text-7xl font-bold tracking-tighter mb-4"
             />
             <FadeIn delay={0.2}>
               <p className="text-xl text-white/60">
-                Things I build to understand what comes next.
+                {portfolioData.labSection.subtitle}
               </p>
             </FadeIn>
           </div>
