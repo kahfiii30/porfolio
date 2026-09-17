@@ -1,16 +1,13 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { cookies } from "next/headers";
 
 interface NextExperimentProps {
   href: string;
   label: string;
+  isId?: boolean;
 }
 
-export default function NextExperiment({ href, label }: NextExperimentProps) {
-  const cookieStore = cookies();
-  const isId = cookieStore.get("NEXT_LOCALE")?.value === "id";
-
+export default function NextExperiment({ href, label, isId = false }: NextExperimentProps) {
   return (
     <div className="mt-40 border-t border-white/10 pt-16">
       <Link 
