@@ -302,9 +302,11 @@ export default async function Home() {
             <a href={`https://wa.me/${contact.whatsapp.replace(/\D/g,'')}`} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
               WHATSAPP
             </a>
-            <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
-              LINKEDIN
-            </a>
+            {contact.linkedin && (
+              <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
+                LINKEDIN
+              </a>
+            )}
             <a href={contact.github} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
               GITHUB
             </a>
