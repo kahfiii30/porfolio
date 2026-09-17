@@ -1,0 +1,85 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
+
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+  as?: keyof JSX.IntrinsicElements;
+  delay?: number;
+}
+
+export default function AnimatedText({
+  text,
+  className = "",
+  as: Tag = "h1",
+  delay = 0,
+}: AnimatedTextProps) {
+  const lines = text.split("\n");
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: delay,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-100px" }}
+      className={className}
+    >
+      <Tag className="flex flex-col">
+        {lines.map((line, index) => (
+          <span key={index} className="overflow-hidden">
+            <motion.span variants={item} className="block">
+              {line}
+            </motion.span>
+          </span>
+        ))}
+      </Tag>
+    </motion.div>
+  );
+}
+
+export function FadeIn({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
