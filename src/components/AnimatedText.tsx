@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { motion, Variants } from "framer-motion";
+import { ReactNode, ElementType } from "react";
 
 interface AnimatedTextProps {
   text: string;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
   delay?: number;
 }
 
@@ -18,7 +18,7 @@ export default function AnimatedText({
 }: AnimatedTextProps) {
   const lines = text.split("\n");
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -29,7 +29,7 @@ export default function AnimatedText({
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: {
       opacity: 1,

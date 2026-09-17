@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar({ currentLocale = "en" }: { currentLocale?: string }) {
@@ -26,7 +26,7 @@ export default function Navbar({ currentLocale = "en" }: { currentLocale?: strin
     router.refresh();
   };
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     closed: {
       opacity: 0,
       y: "-100%",

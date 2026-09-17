@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { cookies } from "next/headers";
 
-export default function LabLayout({ children }: { children: React.ReactNode }) {
-  const cookieStore = cookies();
+export default async function LabLayout({ children }: { children: React.ReactNode }) {
+  const cookieStore = await cookies();
   const isId = cookieStore.get("NEXT_LOCALE")?.value === "id";
 
   return (

@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   description: "Portfolio of Abdul Azis Al Kahfi exploring the intersection of strategy, content, AI, automation, and digital products.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const currentLocale = cookieStore.get("NEXT_LOCALE")?.value || "en";
 
   return (

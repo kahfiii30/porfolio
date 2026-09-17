@@ -133,7 +133,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   rel="noopener noreferrer"
                   className="font-medium text-accent hover:underline flex items-center gap-1"
                 >
-                  Visit Website <ArrowDownRight className="w-4 h-4 rotate-[-90deg]" />
+                  Visit Website <ArrowUpRight className="w-4 h-4" />
                 </a>
               </FadeIn>
             )}
