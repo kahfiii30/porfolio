@@ -295,7 +295,7 @@ But I prefer learning by building.`,
     email: "[EMAIL]",
     whatsapp: "[WHATSAPP]",
     linkedin: "[LINKEDIN]",
-    github: "[GITHUB]",
+    github: "https://github.com/kahfiii30",
     location: ["Samarinda", "East Kalimantan", "Indonesia"],
   },
 };

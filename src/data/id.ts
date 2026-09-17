@@ -295,7 +295,7 @@ Tetapi saya lebih suka belajar dengan cara membangun sesuatu.`,
     email: "[EMAIL]",
     whatsapp: "[WHATSAPP]",
     linkedin: "[LINKEDIN]",
-    github: "[GITHUB]",
+    github: "https://github.com/kahfiii30",
     location: ["Samarinda", "Kalimantan Timur", "Indonesia"],
   },
 };
