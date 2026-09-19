@@ -575,10 +575,10 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
             <motion.div variants={fadeInUp} className="flex flex-col gap-3">
               <div 
                 className="w-full bg-[#1a1c21] border border-[#f4f3ef]/10 p-1 cursor-zoom-in hover:border-[#6c5ce7] transition-colors"
-                onClick={() => setLightboxImg("/images/projects/insight1.png")}
+                onClick={() => setLightboxImg("/projects/og-store/evidence/proof-juli-2026.png")}
               >
                 <img 
-                  src="/images/projects/insight1.png" 
+                  src="/projects/og-store/evidence/proof-juli-2026.png" 
                   alt="Insight Data 1" 
                   className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity"
                   loading="lazy"
@@ -591,10 +591,10 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
             <motion.div variants={fadeInUp} className="flex flex-col gap-3">
               <div 
                 className="w-full bg-[#1a1c21] border border-[#f4f3ef]/10 p-1 cursor-zoom-in hover:border-[#6c5ce7] transition-colors"
-                onClick={() => setLightboxImg("/images/projects/insight2.png")}
+                onClick={() => setLightboxImg("/projects/og-store/evidence/proof-agustus-2026.png")}
               >
                 <img 
-                  src="/images/projects/insight2.png" 
+                  src="/projects/og-store/evidence/proof-agustus-2026.png" 
                   alt="Insight Data 2" 
                   className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity"
                   loading="lazy"

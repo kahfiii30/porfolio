@@ -11,8 +11,8 @@ const metrics = {
   newContacts: "1.069",
   returningContacts: "725",
   responseRate: "97–98%",
-  closingBefore: "15%",
-  closingCurrent: "25%",
+  closingBefore: "20%",
+  closingCurrent: "30%",
 };
 
 const metricsEn = {
@@ -27,8 +27,8 @@ const metricsEn = {
   newContacts: "1,069",
   returningContacts: "725",
   responseRate: "97–98%",
-  closingBefore: "15%",
-  closingCurrent: "25%",
+  closingBefore: "20%",
+  closingCurrent: "30%",
 };
 
 export const ogStoreData = {
@@ -63,7 +63,7 @@ export const ogStoreData = {
           "Promotional content", "Product campaigns", "Stories", "Feed content", "Campaign concepts", "CTA optimization", "Meta Ads", "Audience targeting", "Performance review", "Customer response workflow", "AI-assisted marketing workflow"
         ],
         result: [
-          "8.74M impressions", "1.95M unique audience", "+2,740 net followers", "247,529 interactions", "97–98% daily response rate", "Closing rate: 15% → 25%"
+          "8.74M impressions", "1.95M unique audience", "+2,740 net followers", "247,529 interactions", "97–98% daily response rate", "Closing rate: 20% → 30%"
         ]
       },
 
@@ -121,7 +121,7 @@ export const ogStoreData = {
       current: "SAAT INI",
       points: "+10 percentage points",
       relativeImp: "ABSOLUTE INCREASE",
-      relativeImp2: "+66.7% RELATIVE IMPROVEMENT",
+      relativeImp2: "+50.0% RELATIVE IMPROVEMENT",
       
       backgroundNum: "07 — Background",
       backgroundTitle: "FROM SELLING TO UNDERSTANDING WHY PEOPLE BUY.",
@@ -170,7 +170,7 @@ export const ogStoreData = {
           "Promotional content", "Product campaigns", "Stories", "Feed content", "Campaign concepts", "CTA optimization", "Meta Ads", "Audience targeting", "Performance review", "Customer response workflow", "AI-assisted marketing workflow"
         ],
         result: [
-          "8.74M impressions", "1.95M unique audience", "+2,740 net followers", "247,529 interactions", "97–98% daily response rate", "Closing rate: 15% → 25%"
+          "8.74M impressions", "1.95M unique audience", "+2,740 net followers", "247,529 interactions", "97–98% daily response rate", "Closing rate: 20% → 30%"
         ]
       },
 
@@ -228,7 +228,7 @@ export const ogStoreData = {
       current: "CURRENT",
       points: "+10 percentage points",
       relativeImp: "ABSOLUTE INCREASE",
-      relativeImp2: "+66.7% RELATIVE IMPROVEMENT",
+      relativeImp2: "+50.0% RELATIVE IMPROVEMENT",
       
       backgroundNum: "07 — Background",
       backgroundTitle: "FROM SELLING TO UNDERSTANDING WHY PEOPLE BUY.",

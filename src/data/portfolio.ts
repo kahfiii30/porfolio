@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
-    eyebrow: "ABDUL AZIS AL KAHFI\nSAMARINDA — INDONESIA",
-    headline: "I CONNECT\nMARKETING,\nCREATIVE &\nTECHNOLOGY.",
+    eyebrow: "Abdul Azis Al Kahfi\n— Marketing & Operations",
+    headline: "Creative.\nSystematic.\nResults\nDriven.",
     description:
       "Digital marketer and creative operator exploring\nthe intersection of strategy, content, AI,\nautomation, and digital products.",
     status: "Open to Work / Collaboration",
@@ -15,6 +15,44 @@ export const portfolioData = {
     "DIGITAL PRODUCTS",
     "OPERATIONS",
   ],
+  coreCompetencies: {
+    title: "MARKETING OPERATOR.\nNOT JUST A\nCONTENT CREATOR.",
+    subtitle: "My approach connects content,\npaid distribution,\ncustomer conversations,\ndata and conversion.",
+    groups: [
+      { 
+        id: "01", 
+        name: "SOCIAL & CONTENT", 
+        skills: ["Content Strategy", "Content Planning", "Creative Direction", "Copywriting", "Campaign Planning", "Social Media Management", "Content Analytics"], 
+        description: "Building content systems that turn ideas\ninto consistent and measurable communication.",
+        proof: { skill: "Content Analytics", label: "OG STORE CASE STUDY" }
+      },
+      { 
+        id: "02", 
+        name: "PERFORMANCE", 
+        skills: ["Meta Ads", "Audience Targeting", "Retargeting", "Creative Testing", "Campaign Optimization", "Performance Reporting", "CTR · CPC · CPM Analysis", "Conversion Analysis"], 
+        description: "Turning attention into measurable reach,\ntraffic, conversations and performance insights.",
+        proof: { skill: "Meta Ads", label: "PERFORMANCE" }
+      },
+      { 
+        id: "03", 
+        name: "CONVERSION", 
+        skills: ["Customer Conversation", "Lead Handling", "WhatsApp Follow-up", "Customer Journey", "Sales Communication", "Closing Support", "Product Communication"], 
+        description: "Connecting marketing activity\nwith real customer conversations\nand purchase decisions.",
+        proof: { skill: "Closing Support", label: "SALES + SOCIAL" }
+      },
+      { 
+        id: "04", 
+        name: "SYSTEMS", 
+        skills: ["AI Automation", "n8n", "Hermes", "OpenClaw", "ChatGPT · Claude", "Google Sheets Workflow", "Data Analysis", "Digital Products"], 
+        description: "Building smarter workflows\nthat reduce repetitive work\nand improve marketing execution.",
+        proof: { skill: "AI Automation", label: "THE LAB" }
+      }
+    ]
+  },
+  notJustContent: {
+    title: "NOT JUST\nCONTENT.",
+    copy: "I work across the full path:\n\nCONTENT\n→ DISTRIBUTION\n→ CONVERSATION\n→ CONVERSION\n→ DATA\n→ ITERATION\n\nMy customer-facing background\nhelps me understand\nwhat happens after someone\nsees the content."
+  },
   about: {
     statement: "NOT JUST\nONE DISCIPLINE.",
     description: `I started from customer-facing roles and retail,
@@ -38,10 +76,9 @@ work smarter?"`,
   projects: [
     {
       id: "og-store",
-      title: "OG STORE\nDIGITAL CONTENT\n& MARKETING",
-      category: "Retail Gadget • Social Media • Marketing • Creative Operations",
-      shortDescription:
-        "Supporting digital marketing and content execution for a multi-branch gadget retailer in Samarinda.",
+      title: "OG STORE SAMARINDA\n8.74M Impressions\n+2,740 Net Followers\n97–98% Response Rate",
+      category: "Social Media · Meta Ads · Conversion",
+      shortDescription: "Connecting content, paid distribution,\ncustomer conversations and conversion\nfor a multi-branch gadget retailer.",
       slug: "og-store",
       image: "/images/projects/ogstore.png",
       workedOn: ["Content", "Campaign", "Creative", "Operations"],
@@ -188,6 +225,17 @@ work smarter?"`,
     "WhatsApp",
     "Marketplace Tools",
   ],
+  toolsConfig: {
+    title: "TOOLS I ACTUALLY USE",
+    categories: [
+      { name: "MARKETING", tools: ["Meta Ads Manager", "Meta Business Suite", "Instagram", "WhatsApp Business"] },
+      { name: "CONTENT & CREATIVE", tools: ["Canva", "ChatGPT", "Claude"] },
+      { name: "AI & WORKFLOW", tools: ["n8n", "Hermes", "OpenClaw"] },
+      { name: "OPERATIONS", tools: ["Google Sheets"] },
+      { name: "BUILD / DIGITAL PRODUCTS", tools: ["GitHub", "Vercel", "Supabase"] }
+    ]
+  },
+
   experience: [
     {
       title: "OG STORE SAMARINDA",
@@ -292,10 +340,112 @@ But I prefer learning by building.`,
     headline: "HAVE A PROBLEM\nWORTH SOLVING?",
     subheading:
       "I'm open to opportunities,\nprojects, collaboration,\nand conversations around marketing,\ncreative work, AI, and digital products.",
-    email: "[EMAIL]",
-    whatsapp: "[WHATSAPP]",
-    linkedin: "[LINKEDIN]",
-    github: "[GITHUB]",
+    email: "kulbetfiii@gmail.com",
+    whatsapp: "6285828218908",
+    linkedin: "",
+    github: "https://github.com/kahfiii30",
     location: ["Samarinda", "East Kalimantan", "Indonesia"],
   },
+  labSection: {
+    title: "THE LAB.",
+    subtitle: "Things I build to understand what comes next."
+  },
+  labPages: {
+    aiAutomation: {
+      title: "AI AUTOMATION",
+      subtitle: "Using automation to reduce repetitive work and connect tools together.",
+      section1Title: "01 / Concept",
+      section1Text: "I explore AI automation not as an enterprise software engineer, but as a marketer and operator looking to solve daily friction.\n\nThe focus is on pragmatic workflows: taking data from one place, processing it with AI to extract meaning, and routing it to where it needs to be—whether that's a dashboard, a messaging app, or a content schedule.",
+      section2Title: "02 / Tools & Explorations",
+      tools: [
+        { name: "n8n Workflows", desc: "Building custom node-based automations to connect external APIs, manage webhooks, and trigger background tasks without heavy manual scripting." },
+        { name: "Telegram & WhatsApp", desc: "Creating workflow concepts where notifications, data summaries, and quick actions are routed directly to messaging apps for instant operational visibility." },
+        { name: "AI Agents", desc: "Experimenting with autonomous agents that can interpret ambiguous user requests, execute multi-step logic, and format data for business use cases." },
+        { name: "Content Automation", desc: "Pipelines that scrape trends, aggregate insights, and generate drafts to accelerate the creative process, rather than replace it completely." }
+      ],
+      next: "Digital Products"
+    },
+    digitalProducts: {
+      title: "DIGITAL PRODUCTS",
+      subtitle: "Turning ideas into usable digital tools and interface experiments.",
+      projects: [
+        {
+          title: "WealthPilot",
+          idea: "Personal finance visualization.",
+          problem: "Most finance apps are either too complex (like a spreadsheet) or too simple. Users struggle to understand their true net worth and cash flow trend.",
+          solution: "A sleek, dark-mode fintech dashboard that automatically visualizes net worth, categorizes expenses, and highlights 6-month trends.",
+          tech: "React, Next.js, UI/UX Design",
+          learned: "Designing dense data dashboards requires strict typography hierarchy and extremely constrained color palettes to avoid overwhelming the user."
+        },
+        {
+          title: "Sampride",
+          idea: "Minimalist productivity checklist.",
+          problem: "Traditional to-do apps introduce too much friction with due dates, tags, and folders, causing users to abandon them.",
+          solution: "A frictionless, visually premium checklist that focuses solely on what needs to be done today, with zero setup required.",
+          tech: "Web Technologies, Interface Design",
+          learned: "Subtracting features is often much harder than adding them. The premium feel comes from generous whitespace and fluid interaction, not complex functionality."
+        },
+        {
+          title: "Kahfi Audit Marketing",
+          idea: "Interactive business diagnosis.",
+          problem: "Small businesses know they need marketing, but they don't know where their actual bottleneck is (Offer? Content? Distribution?).",
+          solution: "An interactive assessment tool that guides owners through their customer journey, outputting a clear visual diagnosis.",
+          tech: "Strategy mapping, Web Architecture",
+          learned: "Framing marketing as a systemic workflow rather than 'just making content' changes how clients perceive the value of the service."
+        }
+      ],
+      next: "Marketing Systems"
+    },
+    marketingSystems: {
+      title: "MARKETING SYSTEMS",
+      subtitle: "Connecting strategy, content, funnel, and execution into a predictable engine.",
+      section1Title: "01 / The Concept",
+      section1Text: "Most businesses view marketing as \"just posting content\". This fragmented view often leads to high effort with low return.\n\nMarketing is a system. If the offer is weak, the content won't save it. If the distribution is wrong, the offer won't be seen. If the follow-up is broken, the leads won't close.",
+      workflow: [
+        { step: "RESEARCH", desc: "Understanding the market gap." },
+        { step: "POSITIONING", desc: "Defining why they should care." },
+        { step: "OFFER", desc: "Crafting the irresistible value." },
+        { step: "CONTENT", desc: "Communicating the offer visually." },
+        { step: "DISTRIBUTION", desc: "Getting eyeballs on the content." },
+        { step: "CONVERSION", desc: "Turning attention into action." },
+        { step: "FOLLOW-UP", desc: "Nurturing leads into customers." },
+        { step: "ANALYSIS", desc: "Measuring what actually works." }
+      ],
+      section2Title: "02 / Connected Touchpoints",
+      section2Text: "A system requires connecting multiple digital touchpoints seamlessly so the customer never feels lost.\nThis approach is central to the framework used in Kahfi Audit Marketing.",
+      touchpoints: ["Google Maps", "Instagram", "WhatsApp", "Website", "Marketplace"],
+      next: "Meta Ads & Performance"
+    },
+    metaAds: {
+      title: "META ADS\n& PERFORMANCE\nMARKETING",
+      subtitle: "I use Meta Ads not only to \"run ads\", but to understand how creative, audience, offer, and funnel work together.\n\nThe goal is to find what works, understand why it works, and improve it through testing.",
+      capabilitiesTitle: "Capabilities",
+      capabilities: [
+        { num: "01", title: "CAMPAIGN STRUCTURE", items: ["Campaign setup", "Ad Set structure", "Ad creative organization", "Budget allocation", "Objective selection"] },
+        { num: "02", title: "AUDIENCE", items: ["Broad audience", "Interest targeting", "Custom audiences", "Retargeting", "Lookalike audience concepts"] },
+        { num: "03", title: "CREATIVE TESTING", items: ["Hooks", "Creative angles", "Static ads", "Video ads", "Offer testing", "CTA testing"] },
+        { num: "04", title: "PERFORMANCE ANALYSIS", items: ["CTR", "CPM", "CPC", "Cost per result", "Conversion", "ROAS"] }
+      ],
+      workflowTitle: "The Workflow",
+      workflow: ["BUSINESS GOAL", "AUDIENCE", "OFFER", "CREATIVE", "META ADS", "DATA", "ITERATION"],
+      philosophyQuote: "\"GOOD ADS ARE NOT\nJUST ABOUT TARGETING.\n\nTHE CREATIVE,\nOFFER AND CUSTOMER\nMATTER JUST AS MUCH.\"",
+      philosophyText: "Performance marketing works best when advertising is connected to the entire customer journey.",
+      next: "Web Experiments"
+    },
+    webExperiments: {
+      title: "WEB EXPERIMENTS",
+      subtitle: "Learning by building and shipping. Exploring the intersection of design, code, and product.",
+      section1Title: "01 / The Approach",
+      section1Text: "I am not a senior software engineer, nor do I pretend to be one.\n\nMy approach to web development is purely driven by experimentation: having an idea, opening an editor, utilizing AI to bridge technical gaps, and shipping something that works.\n\nThis allows me to rapidly prototype ideas, test marketing hypotheses in the real world, and understand the technical constraints of the products I market.",
+      section2Title: "02 / The Stack",
+      tools: [
+        { name: "GitHub", use: "Version control and deployment pipelines." },
+        { name: "Vercel", use: "Hosting, edge functions, and analytics." },
+        { name: "Next.js", use: "React framework for production-grade applications." },
+        { name: "Supabase", use: "Backend as a Service, PostgreSQL, and authentication." },
+        { name: "AI Assistants", use: "Accelerating development, debugging, and ideation." }
+      ],
+      next: "AI Automation"
+    }
+  }
 };
