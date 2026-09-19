@@ -17,12 +17,36 @@ export const portfolioData = {
   ],
   coreCompetencies: {
     title: "MARKETING OPERATOR.\nNOT JUST A\nCONTENT CREATOR.",
-    subtitle: "My approach connects creative content with distribution,\ncustomer conversations, and sales systems.",
+    subtitle: "My approach connects content,\npaid distribution,\ncustomer conversations,\ndata and conversion.",
     groups: [
-      { id: "01", name: "SOCIAL & CONTENT", skills: ["Content Planning", "Creative Direction", "Copywriting"], description: "Building narratives and visuals that capture attention." },
-      { id: "02", name: "PERFORMANCE", skills: ["Meta Ads", "Audience Targeting", "Budget Optimization"], description: "Turning attention into traffic and new reach." },
-      { id: "03", name: "CONVERSION", skills: ["Chat Communication", "Lead Management", "Sales Operations"], description: "Closing sales and nurturing customer conversations." },
-      { id: "04", name: "SYSTEMS", skills: ["AI Automation", "Data Analysis", "Digital Products"], description: "Measuring results and building automated workflows." }
+      { 
+        id: "01", 
+        name: "SOCIAL & CONTENT", 
+        skills: ["Content Strategy", "Content Planning", "Creative Direction", "Copywriting", "Campaign Planning", "Social Media Management", "Content Analytics"], 
+        description: "Building content systems that turn ideas\ninto consistent and measurable communication.",
+        proof: { skill: "Content Analytics", label: "OG STORE CASE STUDY" }
+      },
+      { 
+        id: "02", 
+        name: "PERFORMANCE", 
+        skills: ["Meta Ads", "Audience Targeting", "Retargeting", "Creative Testing", "Campaign Optimization", "Performance Reporting", "CTR · CPC · CPM Analysis", "Conversion Analysis"], 
+        description: "Turning attention into measurable reach,\ntraffic, conversations and performance insights.",
+        proof: { skill: "Meta Ads", label: "PERFORMANCE" }
+      },
+      { 
+        id: "03", 
+        name: "CONVERSION", 
+        skills: ["Customer Conversation", "Lead Handling", "WhatsApp Follow-up", "Customer Journey", "Sales Communication", "Closing Support", "Product Communication"], 
+        description: "Connecting marketing activity\nwith real customer conversations\nand purchase decisions.",
+        proof: { skill: "Closing Support", label: "SALES + SOCIAL" }
+      },
+      { 
+        id: "04", 
+        name: "SYSTEMS", 
+        skills: ["AI Automation", "n8n", "Hermes", "OpenClaw", "ChatGPT · Claude", "Google Sheets Workflow", "Data Analysis", "Digital Products"], 
+        description: "Building smarter workflows\nthat reduce repetitive work\nand improve marketing execution.",
+        proof: { skill: "AI Automation", label: "THE LAB" }
+      }
     ]
   },
   notJustContent: {

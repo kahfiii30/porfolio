@@ -102,18 +102,27 @@ export default async function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {coreCompetencies.groups.map((group: any, i: number) => (
-              <FadeIn key={group.name} delay={i * 0.1}>
-                <h3 className="text-sm font-mono tracking-widest text-accent mb-8 border-b border-white/10 pb-4">
-                  {group.id} — {group.name}
-                </h3>
-                <ul className="flex flex-col gap-4 mb-8">
-                  {group.skills.map((skill: string) => (
-                    <li key={skill} className="text-lg font-medium">{skill}</li>
-                  ))}
-                </ul>
-                <p className="text-sm text-white/50 leading-relaxed whitespace-pre-line">
-                  {group.description}
-                </p>
+              <FadeIn key={group.name} delay={i * 0.1} className="flex h-full">
+                <div className="group flex flex-col h-full w-full">
+                  <h3 className="text-sm font-mono tracking-widest text-accent mb-8 border-b border-white/10 group-hover:border-white/30 transition-colors duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] pb-4 uppercase">
+                    {group.id} — {group.name}
+                  </h3>
+                  <ul className="flex flex-col gap-4 mb-8 flex-grow">
+                    {group.skills.map((skill: string) => (
+                      <li key={skill} className="text-lg font-medium text-white group-hover:translate-x-[2px] transition-transform duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]">
+                        {skill}
+                        {group.proof?.skill === skill && (
+                          <span className="block mt-1.5 text-[10px] font-mono text-white/40 border border-white/10 rounded px-1.5 py-0.5 w-fit uppercase tracking-widest">
+                            {group.proof.label}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-white/50 leading-relaxed whitespace-pre-line group-hover:translate-x-[2px] transition-transform duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] mt-auto">
+                    {group.description}
+                  </p>
+                </div>
               </FadeIn>
             ))}
           </div>

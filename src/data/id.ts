@@ -17,12 +17,36 @@ export const portfolioData = {
   ],
   coreCompetencies: {
     title: "OPERATOR MARKETING.\nBUKAN SEKADAR\nPEMBUAT KONTEN.",
-    subtitle: "Pendekatan saya menghubungkan konten kreatif dengan distribusi,\npercakapan pelanggan, dan sistem penjualan.",
+    subtitle: "Pendekatan saya menghubungkan konten,\ndistribusi berbayar,\npercakapan pelanggan,\ndata dan konversi.",
     groups: [
-      { id: "01", name: "SOSIAL & KONTEN", skills: ["Perencanaan Konten", "Arahan Kreatif", "Copywriting"], description: "Membangun narasi dan visual yang menarik perhatian." },
-      { id: "02", name: "PERFORMA", skills: ["Meta Ads", "Targeting Audiens", "Optimasi Anggaran"], description: "Mengubah perhatian menjadi lalu lintas dan jangkauan baru." },
-      { id: "03", name: "KONVERSI", skills: ["Komunikasi Chat", "Manajemen Prospek", "Operasional Penjualan"], description: "Menutup penjualan dan merawat percakapan pelanggan." },
-      { id: "04", name: "SISTEM", skills: ["Otomatisasi AI", "Analisis Data", "Produk Digital"], description: "Mengukur hasil dan membangun alur kerja otomatis." }
+      { 
+        id: "01", 
+        name: "SOSIAL & KONTEN", 
+        skills: ["Strategi Konten", "Perencanaan Konten", "Arahan Kreatif", "Copywriting", "Perencanaan Kampanye", "Manajemen Media Sosial", "Analitik Konten"], 
+        description: "Membangun sistem konten yang mengubah ide\nmenjadi komunikasi yang konsisten dan terukur.",
+        proof: { skill: "Analitik Konten", label: "STUDI KASUS OG STORE" }
+      },
+      { 
+        id: "02", 
+        name: "PERFORMA", 
+        skills: ["Meta Ads", "Targeting Audiens", "Retargeting", "Pengujian Kreatif", "Optimasi Kampanye", "Pelaporan Performa", "Analisis CTR · CPC · CPM", "Analisis Konversi"], 
+        description: "Mengubah perhatian menjadi jangkauan,\nlalu lintas, percakapan, dan wawasan performa yang terukur.",
+        proof: { skill: "Meta Ads", label: "PERFORMA" }
+      },
+      { 
+        id: "03", 
+        name: "KONVERSI", 
+        skills: ["Percakapan Pelanggan", "Penanganan Prospek", "Tindak Lanjut WhatsApp", "Perjalanan Pelanggan", "Komunikasi Penjualan", "Dukungan Closing", "Komunikasi Produk"], 
+        description: "Menghubungkan aktivitas pemasaran\ndengan percakapan pelanggan yang nyata\ndan keputusan pembelian.",
+        proof: { skill: "Dukungan Closing", label: "PENJUALAN + SOSIAL" }
+      },
+      { 
+        id: "04", 
+        name: "SISTEM", 
+        skills: ["Otomatisasi AI", "n8n", "Hermes", "OpenClaw", "ChatGPT · Claude", "Alur Kerja Google Sheets", "Analisis Data", "Produk Digital"], 
+        description: "Membangun alur kerja yang lebih cerdas\nuntuk mengurangi pekerjaan berulang\ndan meningkatkan eksekusi pemasaran.",
+        proof: { skill: "Otomatisasi AI", label: "THE LAB" }
+      }
     ]
   },
   notJustContent: {
