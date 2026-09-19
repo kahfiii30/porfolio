@@ -9,7 +9,7 @@
   --light-fg: #0A0A0A;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);

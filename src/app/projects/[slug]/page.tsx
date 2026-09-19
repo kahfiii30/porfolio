@@ -12,9 +12,9 @@ interface ProjectPageProps {
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const portfolioData = await getDictionary();
+  const portfolioData: any = await getDictionary();
   const { slug } = await params;
-  const project = portfolioData.projects.find((p) => p.slug === slug);
+  const project: any = portfolioData.projects.find((p: any) => p.slug === slug);
 
   if (!project) {
     return { title: "Project Not Found" };
@@ -27,9 +27,9 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const portfolioData = await getDictionary();
+  const portfolioData: any = await getDictionary();
   const { slug } = await params;
-  const project = portfolioData.projects.find((p) => p.slug === slug);
+  const project: any = portfolioData.projects.find((p: any) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -94,8 +94,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {project.role && (
               <FadeIn>
                 <h3 className="text-sm font-mono tracking-widest text-white/40 mb-4 border-b border-white/10 pb-2">ROLE</h3>
-                <ul className="flex flex-col gap-2">
-                  {project.role.map((r, i) => (
+                <ul className="flex flex-col gap-1 text-white/70">
+                  {project.role.map((r: string, i: number) => (
                     <li key={i} className="font-medium text-white/80">{r}</li>
                   ))}
                 </ul>
@@ -105,8 +105,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {project.workedOn && (
               <FadeIn>
                 <h3 className="text-sm font-mono tracking-widest text-white/40 mb-4 border-b border-white/10 pb-2">WORKED ON</h3>
-                <ul className="flex flex-col gap-2">
-                  {project.workedOn.map((w, i) => (
+                <ul className="flex flex-col gap-1 text-white/70">
+                  {project.workedOn.map((w: string, i: number) => (
                     <li key={i} className="font-medium text-white/80">{w}</li>
                   ))}
                 </ul>
@@ -117,7 +117,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <FadeIn>
                 <h3 className="text-sm font-mono tracking-widest text-white/40 mb-4 border-b border-white/10 pb-2">TECH / TOOLS</h3>
                 <ul className="flex flex-col gap-2">
-                  {project.tech.map((t, i) => (
+                  {project.tech.map((t: string, i: number) => (
                     <li key={i} className="font-medium text-white/80">{t}</li>
                   ))}
                 </ul>
@@ -138,75 +138,49 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </FadeIn>
             )}
           </aside>
-
           {/* Main Content */}
           <div className="flex flex-col gap-20">
-            {project.context && (
-              <FadeIn>
-                <h2 className="text-3xl font-bold mb-6 tracking-tight">Context</h2>
-                <p className="text-lg text-white/70 leading-relaxed whitespace-pre-line">
-                  {project.context}
-                </p>
-              </FadeIn>
-            )}
-
-            {project.challenges && (
-              <FadeIn>
-                <h2 className="text-3xl font-bold mb-6 tracking-tight">Challenge</h2>
-                <ul className="flex flex-col gap-4">
-                  {project.challenges.map((c, i) => (
-                    <li key={i} className="flex gap-4 items-start">
-                      <span className="text-accent font-mono mt-1">0{i + 1}</span>
-                      <span className="text-lg text-white/80">{c}</span>
-                    </li>
-                  ))}
-                </ul>
-              </FadeIn>
-            )}
-
-            {project.responsibilities && (
-              <FadeIn>
-                <h2 className="text-3xl font-bold mb-6 tracking-tight">Execution</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {project.responsibilities.map((r, i) => (
-                    <li key={i} className="bg-surface border border-white/5 p-4 rounded-xl text-white/80 text-sm font-medium">
-                      {r}
-                    </li>
-                  ))}
-                </ul>
-              </FadeIn>
-            )}
-
-            {project.areas && (
-              <FadeIn>
-                <h2 className="text-3xl font-bold mb-6 tracking-tight">Areas Explored</h2>
-                <div className="flex flex-wrap gap-3">
-                  {project.areas.map((a, i) => (
-                    <span key={i} className="px-4 py-2 border border-white/20 rounded-full text-sm font-medium">
-                      {a}
-                    </span>
-                  ))}
-                </div>
-              </FadeIn>
-            )}
-            
-            {project.features && (
-              <FadeIn>
-                <h2 className="text-3xl font-bold mb-6 tracking-tight">Features</h2>
-                <ul className="flex flex-col gap-3">
-                  {project.features.map((f, i) => (
-                    <li key={i} className="flex gap-3 items-center text-white/80">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </FadeIn>
-            )}
+            <div className="space-y-16">
+              {project.snapshot && (
+                <>
+                  <FadeIn>
+                    <h2 className="text-3xl font-bold mb-4 tracking-tight">Objective</h2>
+                    <p className="text-lg text-white/70 leading-relaxed whitespace-pre-line">
+                      {project.snapshot.objective}
+                    </p>
+                  </FadeIn>
+                  <FadeIn>
+                    <h2 className="text-3xl font-bold mb-4 tracking-tight">Problem</h2>
+                    <p className="text-lg text-white/70 leading-relaxed whitespace-pre-line">
+                      {project.snapshot.problem}
+                    </p>
+                  </FadeIn>
+                  {project.snapshot.approach && (
+                    <FadeIn>
+                      <h2 className="text-3xl font-bold mb-6 tracking-tight">Approach</h2>
+                      <ul className="flex flex-col gap-4">
+                        {project.snapshot.approach.map((a: string, i: number) => (
+                          <li key={i} className="flex gap-4 items-start">
+                            <span className="text-accent font-mono mt-1">0{i + 1}</span>
+                            <span className="text-lg text-white/80">{a}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </FadeIn>
+                  )}
+                  {project.snapshot.learning && (
+                    <FadeIn>
+                      <h2 className="text-3xl font-bold mb-4 tracking-tight">Learning</h2>
+                      <p className="text-lg text-white/70 leading-relaxed whitespace-pre-line font-medium border-l-2 border-accent pl-6 py-2">
+                        {project.snapshot.learning}
+                      </p>
+                    </FadeIn>
+                  )}
+                </>
+              )}
+            </div>
           </div>
-
         </div>
-
       </div>
     </main>
   );

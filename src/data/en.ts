@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
-    eyebrow: "ABDUL AZIS AL KAHFI\nSAMARINDA — INDONESIA",
-    headline: "I CONNECT\nMARKETING,\nCREATIVE &\nTECHNOLOGY.",
+    eyebrow: "Abdul Azis Al Kahfi\n— Marketing & Operations",
+    headline: "Creative.\nSystematic.\nResults\nDriven.",
     description:
       "Digital marketer and creative operator exploring\nthe intersection of strategy, content, AI,\nautomation, and digital products.",
     status: "Open to Work / Collaboration",
@@ -15,6 +15,20 @@ export const portfolioData = {
     "DIGITAL PRODUCTS",
     "OPERATIONS",
   ],
+  coreCompetencies: {
+    title: "MARKETING OPERATOR.\nNOT JUST A\nCONTENT CREATOR.",
+    subtitle: "My approach connects creative content with distribution,\ncustomer conversations, and sales systems.",
+    groups: [
+      { id: "01", name: "SOCIAL & CONTENT", skills: ["Content Planning", "Creative Direction", "Copywriting"], description: "Building narratives and visuals that capture attention." },
+      { id: "02", name: "PERFORMANCE", skills: ["Meta Ads", "Audience Targeting", "Budget Optimization"], description: "Turning attention into traffic and new reach." },
+      { id: "03", name: "CONVERSION", skills: ["Chat Communication", "Lead Management", "Sales Operations"], description: "Closing sales and nurturing customer conversations." },
+      { id: "04", name: "SYSTEMS", skills: ["AI Automation", "Data Analysis", "Digital Products"], description: "Measuring results and building automated workflows." }
+    ]
+  },
+  notJustContent: {
+    title: "NOT JUST\nCONTENT.",
+    copy: "I work across the full path:\n\nCONTENT\n→ DISTRIBUTION\n→ CONVERSATION\n→ CONVERSION\n→ DATA\n→ ITERATION\n\nMy customer-facing background\nhelps me understand\nwhat happens after someone\nsees the content."
+  },
   about: {
     statement: "NOT JUST\nONE DISCIPLINE.",
     description: `I started from customer-facing roles and retail,
@@ -187,6 +201,17 @@ work smarter?"`,
     "WhatsApp",
     "Marketplace Tools",
   ],
+  toolsConfig: {
+    title: "TOOLS I ACTUALLY USE",
+    categories: [
+      { name: "MARKETING", tools: ["Meta Ads Manager", "Meta Business Suite", "Instagram", "WhatsApp Business"] },
+      { name: "CONTENT & CREATIVE", tools: ["Canva", "ChatGPT", "Claude"] },
+      { name: "AI & WORKFLOW", tools: ["n8n", "Hermes", "OpenClaw"] },
+      { name: "OPERATIONS", tools: ["Google Sheets"] },
+      { name: "BUILD / DIGITAL PRODUCTS", tools: ["GitHub", "Vercel", "Supabase"] }
+    ]
+  },
+
   experience: [
     {
       title: "OG STORE SAMARINDA",

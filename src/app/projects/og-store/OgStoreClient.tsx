@@ -1,9 +1,9 @@
 
 "use client";
 
-import { motion, useScroll, useSpring, Variants } from "framer-motion";
+import { motion, useScroll, useSpring, Variants, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import ForceScrollToTop from "@/components/ForceScrollToTop";
 
@@ -84,6 +84,8 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
   });
 
   const [isMounted, setIsMounted] = useState(false);
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -135,20 +137,84 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
 
           <motion.div variants={fadeInUp} className="mt-9 flex flex-wrap gap-7 font-plex text-[12.5px] text-[#5c5e68]">
             <div className="flex gap-2">
-              Peran <span className="text-[#f4f3ef]">{data.role}</span>
+              Role <span className="text-[#f4f3ef]">{data.role}</span>
             </div>
             <div className="flex gap-2">
-              Durasi <span className="text-[#f4f3ef]">{data.duration}</span>
+              Duration <span className="text-[#f4f3ef]">{data.duration}</span>
             </div>
             <div className="flex gap-2">
-              Periode data <span className="text-[#f4f3ef]">{data.dataPeriod}</span>
+              Data Period <span className="text-[#f4f3ef]">{data.dataPeriod}</span>
             </div>
           </motion.div>
         </motion.header>
 
         <PulseDivider />
 
-        {/* 00 - ABOUT */}
+        {/* 00 - PROJECT SNAPSHOT */}
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="py-16 border-b border-[#f4f3ef]/10"
+        >
+          <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-9">
+            <div>
+              <motion.div variants={fadeInUp} className="font-plex text-[12px] text-[#5c5e68] tracking-[0.08em] mb-4">
+                {data.labels.snapshotNum}
+              </motion.div>
+              <motion.h2 variants={fadeInUp} className="font-space font-semibold text-[26px] tracking-tight">
+                {data.labels.snapshotTitle}
+              </motion.h2>
+            </div>
+          </div>
+          
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-12 text-[15px] text-[#9092a0]">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-[11px] font-plex uppercase tracking-[0.1em] text-[#5c5e68] mb-2 border-b border-[#f4f3ef]/10 pb-2">OBJECTIVE</h3>
+                <p className="leading-relaxed text-[#f4f3ef]">{data.labels.snapshotData.objective}</p>
+              </div>
+              <div>
+                <h3 className="text-[11px] font-plex uppercase tracking-[0.1em] text-[#5c5e68] mb-2 border-b border-[#f4f3ef]/10 pb-2">PROBLEM</h3>
+                <p className="leading-relaxed">{data.labels.snapshotData.problem}</p>
+              </div>
+              <div>
+                <h3 className="text-[11px] font-plex uppercase tracking-[0.1em] text-[#5c5e68] mb-2 border-b border-[#f4f3ef]/10 pb-2">STRATEGY</h3>
+                <p className="leading-relaxed font-semibold text-[#f4f3ef]">{data.labels.snapshotData.strategy}</p>
+              </div>
+            </div>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-[11px] font-plex uppercase tracking-[0.1em] text-[#5c5e68] mb-2 border-b border-[#f4f3ef]/10 pb-2">MY ROLE</h3>
+                <p className="text-[#f4f3ef] font-semibold mb-2">{data.labels.snapshotData.role}</p>
+                <ul className="flex flex-wrap gap-2">
+                  {data.labels.snapshotData.responsibilities.map((r: string) => (
+                    <li key={r} className="bg-[#1a1c21] px-2 py-1 rounded-sm text-[12px]">{r}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-[11px] font-plex uppercase tracking-[0.1em] text-[#5c5e68] mb-2 border-b border-[#f4f3ef]/10 pb-2">EXECUTION</h3>
+                <ul className="flex flex-wrap gap-2">
+                  {data.labels.snapshotData.execution.map((e: string) => (
+                    <li key={e} className="border border-[#f4f3ef]/20 px-2 py-1 rounded-sm text-[12px]">{e}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-[11px] font-plex uppercase tracking-[0.1em] text-[#5c5e68] mb-2 border-b border-[#f4f3ef]/10 pb-2">RESULT</h3>
+                <ul className="flex flex-col gap-1">
+                  {data.labels.snapshotData.result.map((res: string) => (
+                    <li key={res} className="text-[#f4f3ef] font-medium">{res}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        {/* 01 - ABOUT */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -177,7 +243,7 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
 
         <PulseDivider2 />
 
-        {/* 01 - REACH & GROWTH */}
+        {/* 02 - REACH & GROWTH */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -222,7 +288,7 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
           </motion.div>
         </motion.section>
 
-        {/* 02 - CONTENT EFFICIENCY */}
+        {/* 03 - CONTENT EFFICIENCY */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -249,40 +315,70 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
                 <span>{data.labels.postLabel}</span>
                 <span className="font-semibold text-[#f4f3ef]">{data.labels.postData}</span>
               </div>
-              <div className="h-[10px] bg-[#1a1c21] relative overflow-hidden border border-[#f4f3ef]/10">
+              <div className="h-[6px] bg-[#1a1c21] rounded-full overflow-hidden">
                 <motion.div 
                   initial={{ width: 0 }}
-                  whileInView={{ width: "100%" }}
+                  whileInView={{ width: "85%" }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                  className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#6c5ce7] to-[#ff6b4a]" 
+                  className="h-full bg-[#6c5ce7]" 
                 />
               </div>
             </motion.div>
-
             <motion.div variants={fadeInUp}>
               <div className="flex justify-between text-[13px] text-[#9092a0] mb-2">
                 <span>{data.labels.reelLabel}</span>
                 <span className="font-semibold text-[#f4f3ef]">{data.labels.reelData}</span>
               </div>
-              <div className="h-[10px] bg-[#1a1c21] relative overflow-hidden border border-[#f4f3ef]/10">
+              <div className="h-[6px] bg-[#1a1c21] rounded-full overflow-hidden">
                 <motion.div 
                   initial={{ width: 0 }}
-                  whileInView={{ width: "69%" }}
+                  whileInView={{ width: "58%" }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                  className="absolute inset-y-0 left-0 bg-[#5c5e68]" 
+                  className="h-full bg-[#f4f3ef]/30" 
                 />
               </div>
             </motion.div>
           </div>
 
-          <motion.div variants={fadeInUp} className="mt-6 p-[18px_20px] border-l-2 border-[#6c5ce7] bg-[#1a1c21] text-[14px] text-[#9092a0] max-w-[640px]">
+          <motion.div variants={fadeInUp} className="mt-8 p-[18px_20px] bg-[#1a1c21] text-[14px] text-[#9092a0] max-w-[640px]">
             <span className="font-semibold text-[#f4f3ef]">{data.labels.strategyInt}</span> {data.labels.strategyIntDesc}
           </motion.div>
         </motion.section>
 
-        {/* 03 - CONVERSATION */}
+        {/* 04 - WHAT CHANGED BEHIND THE NUMBERS */}
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="py-16 border-b border-[#f4f3ef]/10"
+        >
+          <div className="mb-9">
+            <motion.div variants={fadeInUp} className="font-plex text-[12px] text-[#5c5e68] tracking-[0.08em] mb-4">
+              {data.labels.whatChangedNum}
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="font-space font-semibold text-[26px] tracking-tight">
+              {data.labels.whatChangedTitle}
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-[15px] text-[#9092a0] mt-3">
+              {data.labels.whatChangedSubtitle}
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+            {data.labels.whatChangedBlocks.map((block: any, i: number) => (
+              <motion.div key={i} variants={fadeInUp} className="flex gap-4">
+                <div className="text-[#6c5ce7] opacity-60 mt-1 font-plex text-[13px]">0{i+1}</div>
+                <div>
+                  <h3 className="font-semibold text-[15px] text-[#f4f3ef] tracking-wide mb-2 uppercase">{block.title}</h3>
+                  <p className="text-[14px] text-[#9092a0] leading-relaxed">{block.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* 05 - CONVERSATION */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -304,46 +400,44 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
             </motion.div>
           </div>
 
-          <div className="max-w-[640px] flex flex-col gap-[2px] mt-2">
-            {[
-              { label: data.labels.funnelLabels[0], val: data.metrics.conversations, pct: "100%" },
-              { label: data.labels.funnelLabels[1], val: data.metrics.contacts, pct: "96%" },
-              { label: data.labels.funnelLabels[2], val: data.metrics.newContacts, pct: "57%" },
-              { label: data.labels.funnelLabels[3], val: data.metrics.returningContacts, pct: "39%" },
-            ].map((item, i) => (
-              <motion.div key={i} variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-[180px_1fr_auto] items-center gap-[6px] md:gap-4 py-[14px] border-b border-dashed border-[#f4f3ef]/10">
-                <div className="text-[13.5px] text-[#9092a0]">{item.label}</div>
-                <div className="h-[8px] bg-[#1a1c21] border border-[#f4f3ef]/10">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: item.pct }}
-                    transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="h-full bg-[#6c5ce7]" 
-                  />
-                </div>
-                <div className="font-plex text-[14px] text-right min-w-[70px]">{item.val}</div>
-              </motion.div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div variants={fadeInUp} className="flex flex-col gap-[1px] bg-[#f4f3ef]/10 border border-[#f4f3ef]/10 p-[1px]">
+              <div className="bg-[#121316] p-[20px] flex justify-between items-center">
+                <span className="text-[13.5px] text-[#9092a0]">{data.labels.funnelLabels[0]}</span>
+                <span className="font-space font-bold text-[20px] text-[#f4f3ef]">{data.metrics.conversations}</span>
+              </div>
+              <div className="bg-[#121316] p-[20px] flex justify-between items-center">
+                <span className="text-[13.5px] text-[#9092a0]">{data.labels.funnelLabels[1]}</span>
+                <span className="font-space font-bold text-[20px] text-[#f4f3ef]">{data.metrics.contacts}</span>
+              </div>
+              <div className="bg-[#121316] p-[20px] flex justify-between items-center">
+                <span className="text-[13.5px] text-[#9092a0]">{data.labels.funnelLabels[2]}</span>
+                <span className="font-space font-bold text-[20px] text-[#f4f3ef]">{data.metrics.newContacts}</span>
+              </div>
+              <div className="bg-[#121316] p-[20px] flex justify-between items-center">
+                <span className="text-[13.5px] text-[#9092a0]">{data.labels.funnelLabels[3]}</span>
+                <span className="font-space font-bold text-[20px] text-[#f4f3ef]">{data.metrics.returningContacts}</span>
+              </div>
+            </motion.div>
 
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-3 gap-[1px] bg-[#f4f3ef]/10 border border-[#f4f3ef]/10 mt-8 max-w-[920px]">
-            <div className="bg-[#121316] p-[26px_22px]">
-              <div className="font-space font-bold text-[30px] text-[#f4f3ef] tracking-tight">+41,4%</div>
-              <div className="text-[13px] text-[#9092a0] mt-2">{data.labels.newContactGrowth}</div>
+            <div className="flex flex-col gap-6">
+              <motion.div variants={fadeInUp}>
+                <div className="text-[12px] uppercase tracking-wider text-[#5c5e68] mb-1.5">{data.labels.newContactGrowth}</div>
+                <div className="font-space text-[24px] font-bold text-[#f4f3ef]">+37.2%</div>
+              </motion.div>
+              <motion.div variants={fadeInUp}>
+                <div className="text-[12px] uppercase tracking-wider text-[#5c5e68] mb-1.5">{data.labels.responseRate}</div>
+                <div className="font-space text-[24px] font-bold text-[#6c5ce7]">{data.metrics.responseRate}</div>
+              </motion.div>
+              <motion.div variants={fadeInUp}>
+                <div className="text-[12px] uppercase tracking-wider text-[#5c5e68] mb-1.5">{data.labels.returningGrowth}</div>
+                <div className="font-space text-[24px] font-bold text-[#f4f3ef]">+14.2%</div>
+              </motion.div>
             </div>
-            <div className="bg-[#121316] p-[26px_22px]">
-              <div className="font-space font-bold text-[30px] text-[#ff6b4a] tracking-tight">{data.metrics.responseRate}</div>
-              <div className="text-[13px] text-[#9092a0] mt-2">{data.labels.responseRate}</div>
-            </div>
-            <div className="bg-[#121316] p-[26px_22px] col-span-2 md:col-span-1">
-              <div className="font-space font-bold text-[30px] text-[#f4f3ef] tracking-tight">+30,6%</div>
-              <div className="text-[13px] text-[#9092a0] mt-2">{data.labels.returningGrowth}</div>
-            </div>
-          </motion.div>
+          </div>
         </motion.section>
 
-        {/* 04 - CLOSING RATE */}
+        {/* 06 - CONVERSION */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -359,34 +453,73 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
               {data.labels.closingTitle}
             </motion.h2>
           </div>
-
-          <motion.p variants={fadeInUp} className="text-[15px] text-[#9092a0] max-w-[640px] leading-relaxed">
+          
+          <motion.p variants={fadeInUp} className="text-[15px] text-[#9092a0] max-w-[640px] leading-relaxed mb-10">
             {data.labels.closingDesc}
           </motion.p>
-          
-          <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-8 mt-5">
-            <div className="text-center">
-              <div className="font-space font-bold text-[46px] text-[#5c5e68]">{data.metrics.closingBefore}</div>
-              <div className="font-plex text-[12px] text-[#9092a0] mt-1 uppercase">{data.labels.before}</div>
-            </div>
-            <div className="text-[22px] text-[#5c5e68]">→</div>
-            <div className="text-center">
-              <div className="font-space font-bold text-[46px] text-[#ff6b4a]">{data.metrics.closingCurrent}</div>
-              <div className="font-plex text-[12px] text-[#9092a0] mt-1 uppercase">{data.labels.current}</div>
-            </div>
-            <div className="text-[22px] text-[#5c5e68]">=</div>
-            <div className="text-center">
-              <div className="font-space font-bold text-[46px] text-[#ff6b4a]">{data.labels.points}</div>
-              <div className="font-plex text-[12px] text-[#9092a0] mt-1 uppercase">{data.labels.relativeImp}</div>
-            </div>
-          </motion.div>
 
-          <motion.div variants={fadeInUp} className="mt-7 bg-[#1a1c21] border border-dashed border-[#f4f3ef]/[0.18] p-[14px_18px] font-plex text-[11.5px] text-[#9092a0] mb-0">
-            {data.labels.editNote}
+          <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+            <div className="text-center">
+              <div className="font-space font-bold text-[54px] md:text-[72px] text-[#9092a0] opacity-50 tracking-tighter leading-none mb-2">
+                {data.metrics.closingBefore}
+              </div>
+              <div className="font-plex text-[11px] tracking-widest text-[#5c5e68]">{data.labels.before}</div>
+            </div>
+            
+            <div className="hidden md:block w-16 h-[2px] bg-[#f4f3ef]/10 relative">
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-[#f4f3ef]/20 rotate-45" />
+            </div>
+
+            <div className="text-center">
+              <div className="font-space font-bold text-[54px] md:text-[72px] text-[#6c5ce7] tracking-tighter leading-none mb-2 drop-shadow-[0_0_15px_rgba(108,92,231,0.3)]">
+                {data.metrics.closingCurrent}
+              </div>
+              <div className="font-plex text-[11px] tracking-widest text-[#5c5e68]">{data.labels.current}</div>
+            </div>
+            
+            <div className="bg-[#1a1c21] border border-[#f4f3ef]/10 p-5 rounded-lg flex flex-col items-center justify-center min-w-[180px]">
+              <div className="font-space font-bold text-[24px] text-[#f4f3ef] mb-1">{data.labels.points}</div>
+              <div className="font-plex text-[10px] text-[#5c5e68] mb-3">{data.labels.relativeImp}</div>
+              
+              <div className="w-full h-[1px] bg-[#f4f3ef]/10 mb-3" />
+              
+              <div className="font-space font-bold text-[18px] text-[#ff6b4a] mb-1">{data.labels.relativeImp2}</div>
+            </div>
           </motion.div>
         </motion.section>
 
-        {/* 05 - SKILLS */}
+        {/* 07 - BACKGROUND */}
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="py-16 border-b border-[#f4f3ef]/10"
+        >
+          <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-9">
+            <div>
+              <motion.div variants={fadeInUp} className="font-plex text-[12px] text-[#5c5e68] tracking-[0.08em] mb-4">
+                {data.labels.backgroundNum}
+              </motion.div>
+              <motion.h2 variants={fadeInUp} className="font-space font-semibold text-[26px] tracking-tight">
+                {data.labels.backgroundTitle}
+              </motion.h2>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-12">
+            <motion.p variants={fadeInUp} className="text-[16px] text-[#f4f3ef] max-w-[500px] leading-relaxed whitespace-pre-line font-medium opacity-90">
+              {data.labels.backgroundCopy}
+            </motion.p>
+
+            <motion.div variants={fadeInUp} className="border-l-2 border-[#6c5ce7] pl-6 py-2">
+              <h3 className="font-semibold text-[15px] mb-2 whitespace-pre-line">{data.labels.backgroundRole}</h3>
+              <p className="text-[13px] text-[#ff6b4a] font-medium">{data.labels.backgroundAchievement}</p>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* 08 - SKILLS */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -402,23 +535,26 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
               {data.labels.skillsTitle}
             </motion.h2>
           </div>
-
-          <div className="flex flex-col">
-            {data.skills.map((skill: any, idx: number) => (
-              <motion.div key={idx} variants={fadeInUp} className="grid grid-cols-[28px_1fr] gap-4 py-[18px] border-b border-[#f4f3ef]/10 last:border-b-0">
-                <div className="font-plex text-[12px] text-[#6c5ce7] pt-[3px]">
-                  {String(idx + 1).padStart(2, '0')}
-                </div>
-                <div>
-                  <div className="font-space font-semibold text-[16px]">{skill.name}</div>
-                  <div className="text-[13.5px] text-[#9092a0] mt-1 max-w-[560px]">{skill.desc}</div>
-                </div>
-              </motion.div>
+          
+          <motion.div variants={fadeInUp} className="flex flex-wrap gap-2.5">
+            {[
+              "Meta Ads Manager",
+              "Social Media Strategy",
+              "Creative Direction",
+              "Content Planning",
+              "Copywriting",
+              "Data Analytics",
+              "Customer Conversion",
+              "Chat Handling",
+            ].map(skill => (
+              <div key={skill} className="px-4 py-2 border border-[#f4f3ef]/20 rounded-full text-[13.5px] font-medium text-[#9092a0] hover:text-[#f4f3ef] hover:border-[#f4f3ef] transition-colors">
+                {skill}
+              </div>
             ))}
-          </div>
+          </motion.div>
         </motion.section>
 
-        {/* 06 - PROOF */}
+        {/* 09 - EVIDENCE (LIGHTBOX ENABLED) */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -434,43 +570,91 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
               {data.labels.proofTitle}
             </motion.h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
             <motion.div variants={fadeInUp} className="flex flex-col gap-3">
-              <div className="bg-[#1a1c21] rounded-lg overflow-hidden border border-[#f4f3ef]/10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/projects/og-store/evidence/proof-juli-2026.png" alt="Proof Juli 2026" className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity" />
+              <div 
+                className="w-full bg-[#1a1c21] border border-[#f4f3ef]/10 p-1 cursor-zoom-in hover:border-[#6c5ce7] transition-colors"
+                onClick={() => setLightboxImg("/images/projects/insight1.png")}
+              >
+                <img 
+                  src="/images/projects/insight1.png" 
+                  alt="Insight Data 1" 
+                  className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
               </div>
-              <div className="font-plex text-[11.5px] text-[#5c5e68] text-center uppercase tracking-wider">{data.labels.proofJuli}</div>
+              <div className="text-[12px] text-[#5c5e68] font-plex uppercase text-center">
+                {data.labels.proofLabels[0]}
+              </div>
             </motion.div>
-            
             <motion.div variants={fadeInUp} className="flex flex-col gap-3">
-              <div className="bg-[#1a1c21] rounded-lg overflow-hidden border border-[#f4f3ef]/10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/projects/og-store/evidence/proof-agustus-2026.png" alt="Proof Agustus 2026" className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity" />
+              <div 
+                className="w-full bg-[#1a1c21] border border-[#f4f3ef]/10 p-1 cursor-zoom-in hover:border-[#6c5ce7] transition-colors"
+                onClick={() => setLightboxImg("/images/projects/insight2.png")}
+              >
+                <img 
+                  src="/images/projects/insight2.png" 
+                  alt="Insight Data 2" 
+                  className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
               </div>
-              <div className="font-plex text-[11.5px] text-[#5c5e68] text-center uppercase tracking-wider">{data.labels.proofAgustus}</div>
+              <div className="text-[12px] text-[#5c5e68] font-plex uppercase text-center">
+                {data.labels.proofLabels[1]}
+              </div>
             </motion.div>
           </div>
+
+          <motion.div variants={fadeInUp} className="mt-12 text-[12.5px] text-[#5c5e68] max-w-[700px] leading-relaxed mx-auto text-center font-medium">
+            {data.labels.disclaimer}
+          </motion.div>
         </motion.section>
 
-        {/* FOOTER */}
-        <footer className="py-[64px] pb-[80px]">
+        {/* Footer Navigation */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="py-24 text-center"
+        >
+          <Link
+            href="/#work"
+            className="inline-flex items-center justify-center gap-2 text-[13px] font-medium tracking-widest text-[#f4f3ef] border border-[#f4f3ef]/20 rounded-full px-6 py-3 hover:bg-[#f4f3ef] hover:text-[#121316] transition-all"
+          >
+            {data.labels.backToWork}
+          </Link>
+        </motion.div>
+      </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {lightboxImg && (
           <motion.div 
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/95 flex flex-col items-center justify-center p-4 md:p-8 backdrop-blur-sm cursor-zoom-out"
+            onClick={() => setLightboxImg(null)}
           >
-            <div className="font-space text-[20px] font-semibold mt-7">
-              {data.labels.footerCta} <span className="text-[#6c5ce7]">→</span>
-            </div>
-            <p className="font-plex text-[12px] text-[#5c5e68] max-w-[600px] leading-[1.7] mt-[18px] whitespace-pre-line">
-              {data.labels.footerNote}
-            </p>
+            <button 
+              className="absolute top-6 right-6 text-white/50 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors z-[110]"
+              onClick={(e) => { e.stopPropagation(); setLightboxImg(null); }}
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.95, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              src={lightboxImg}
+              alt="Expanded evidence"
+              className="max-w-full max-h-[85vh] object-contain shadow-2xl"
+            />
           </motion.div>
-        </footer>
-
-      </div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }

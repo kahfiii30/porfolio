@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
-    eyebrow: "ABDUL AZIS AL KAHFI\nSAMARINDA — INDONESIA",
-    headline: "SAYA MENGHUBUNGKAN\nMARKETING,\nKREATIF &\nTEKNOLOGI.",
+    eyebrow: "Abdul Azis Al Kahfi\n— Marketing & Operations",
+    headline: "Kreatif.\nSistematis.\nBerorientasi\nHasil.",
     description:
       "Seorang pemasar digital dan pekerja kreatif yang mengeksplorasi\nirisan antara strategi, konten, AI,\notomatisasi, dan produk digital.",
     status: "Terbuka untuk Kolaborasi / Pekerjaan",
@@ -15,6 +15,20 @@ export const portfolioData = {
     "DIGITAL PRODUCTS",
     "OPERATIONS",
   ],
+  coreCompetencies: {
+    title: "OPERATOR MARKETING.\nBUKAN SEKADAR\nPEMBUAT KONTEN.",
+    subtitle: "Pendekatan saya menghubungkan konten kreatif dengan distribusi,\npercakapan pelanggan, dan sistem penjualan.",
+    groups: [
+      { id: "01", name: "SOSIAL & KONTEN", skills: ["Perencanaan Konten", "Arahan Kreatif", "Copywriting"], description: "Membangun narasi dan visual yang menarik perhatian." },
+      { id: "02", name: "PERFORMA", skills: ["Meta Ads", "Targeting Audiens", "Optimasi Anggaran"], description: "Mengubah perhatian menjadi lalu lintas dan jangkauan baru." },
+      { id: "03", name: "KONVERSI", skills: ["Komunikasi Chat", "Manajemen Prospek", "Operasional Penjualan"], description: "Menutup penjualan dan merawat percakapan pelanggan." },
+      { id: "04", name: "SISTEM", skills: ["Otomatisasi AI", "Analisis Data", "Produk Digital"], description: "Mengukur hasil dan membangun alur kerja otomatis." }
+    ]
+  },
+  notJustContent: {
+    title: "BUKAN HANYA\nKONTEN.",
+    copy: "Saya bekerja di seluruh jalur:\n\nKONTEN\n→ DISTRIBUSI\n→ PERCAKAPAN\n→ KONVERSI\n→ DATA\n→ ITERASI\n\nLatar belakang saya di penjualan\nmembantu saya memahami\napa yang terjadi setelah seseorang\nmelihat konten."
+  },
   about: {
     statement: "TIDAK HANYA\nSATU DISIPLIN.",
     description: `Saya memulai karir dari bidang layanan pelanggan dan ritel,
@@ -187,6 +201,17 @@ bekerja dengan lebih cerdas?"`,
     "WhatsApp",
     "Alat Marketplace",
   ],
+  toolsConfig: {
+    title: "ALAT YANG SAYA GUNAKAN",
+    categories: [
+      { name: "MARKETING", tools: ["Meta Ads Manager", "Meta Business Suite", "Instagram", "WhatsApp Business"] },
+      { name: "KONTEN & KREATIF", tools: ["Canva", "ChatGPT", "Claude"] },
+      { name: "AI & ALUR KERJA", tools: ["n8n", "Hermes", "OpenClaw"] },
+      { name: "OPERASIONAL", tools: ["Google Sheets"] },
+      { name: "PRODUK DIGITAL", tools: ["GitHub", "Vercel", "Supabase"] }
+    ]
+  },
+
   experience: [
     {
       title: "OG STORE SAMARINDA",

@@ -7,17 +7,19 @@ import Link from "next/link";
 import ForceScrollToTop from "@/components/ForceScrollToTop";
 
 export default async function Home() {
-  const portfolioData = await getDictionary();
+  const portfolioData: any = await getDictionary();
   const {
     hero,
     marquee,
     about,
+    coreCompetencies,
     projects,
-    capabilities,
-    tools,
+    toolsConfig,
     experience,
     careerStory,
+    notJustContent,
     lab,
+    labSection,
     philosophy,
     principles,
     contact,
@@ -28,8 +30,6 @@ export default async function Home() {
       <ForceScrollToTop />
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[700px] flex flex-col justify-center px-6 md:px-12 pt-20">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
-        
         <div className="container mx-auto">
           <FadeIn delay={0.1}>
             <p className="text-sm tracking-widest font-mono text-white/60 mb-8 whitespace-pre-line">
@@ -86,14 +86,48 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Core Competencies Section */}
+      <section className="py-32 px-6 md:px-12 border-t border-white/10">
+        <div className="container mx-auto">
+          <AnimatedText 
+            text={coreCompetencies.title} 
+            as="h2"
+            className="text-4xl md:text-7xl font-bold tracking-tighter mb-6 whitespace-pre-line"
+          />
+          <FadeIn delay={0.2} className="mb-20">
+            <p className="text-xl text-white/60 whitespace-pre-line">
+              {coreCompetencies.subtitle}
+            </p>
+          </FadeIn>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {coreCompetencies.groups.map((group: any, i: number) => (
+              <FadeIn key={group.name} delay={i * 0.1}>
+                <h3 className="text-sm font-mono tracking-widest text-accent mb-8 border-b border-white/10 pb-4">
+                  {group.id} — {group.name}
+                </h3>
+                <ul className="flex flex-col gap-4 mb-8">
+                  {group.skills.map((skill: string) => (
+                    <li key={skill} className="text-lg font-medium">{skill}</li>
+                  ))}
+                </ul>
+                <p className="text-sm text-white/50 leading-relaxed whitespace-pre-line">
+                  {group.description}
+                </p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Selected Work Section */}
-      <section id="work" className="py-32 px-6 md:px-12">
+      <section id="work" className="py-32 px-6 md:px-12 border-t border-white/10">
         <div className="container mx-auto">
           <div className="mb-20">
             <AnimatedText 
               text="SELECTED\nWORK." 
               as="h2"
-              className="text-5xl md:text-8xl font-bold tracking-tighter leading-none mb-6"
+              className="text-5xl md:text-8xl font-bold tracking-tighter leading-none mb-6 whitespace-pre-line"
             />
             <FadeIn delay={0.3}>
               <p className="text-xl text-white/60 max-w-md">
@@ -103,34 +137,8 @@ export default async function Home() {
           </div>
 
           <div className="flex flex-col gap-32">
-            {projects.map((project, index) => (
+            {projects.map((project: any, index: number) => (
               <ProjectCard key={project.id} project={project} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Capabilities Section */}
-      <section className="py-32 px-6 md:px-12 border-t border-white/10">
-        <div className="container mx-auto">
-          <AnimatedText 
-            text="WHAT I\nCAN BRING." 
-            as="h2"
-            className="text-4xl md:text-7xl font-bold tracking-tighter mb-20"
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {capabilities.map((cap, i) => (
-              <FadeIn key={cap.title} delay={i * 0.1}>
-                <h3 className="text-sm font-mono tracking-widest text-white/40 mb-8 border-b border-white/10 pb-4">
-                  0{i + 1} {cap.title}
-                </h3>
-                <ul className="flex flex-col gap-4">
-                  {cap.items.map((item) => (
-                    <li key={item} className="text-lg font-medium">{item}</li>
-                  ))}
-                </ul>
-              </FadeIn>
             ))}
           </div>
         </div>
@@ -140,17 +148,22 @@ export default async function Home() {
       <section className="py-32 px-6 md:px-12 bg-surface">
         <div className="container mx-auto">
           <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-16 text-center">
-              TOOLS I WORK WITH.
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-20 text-center">
+              {toolsConfig.title}
             </h2>
           </FadeIn>
           
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {tools.map((tool, i) => (
-              <FadeIn key={tool} delay={i * 0.05}>
-                <div className="px-6 py-3 border border-white/10 rounded-full bg-black hover:border-accent hover:text-accent transition-colors cursor-default text-sm font-medium tracking-wide">
-                  {tool}
-                </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            {toolsConfig.categories.map((category: any, i: number) => (
+              <FadeIn key={category.name} delay={i * 0.1}>
+                <h3 className="text-sm font-mono tracking-widest text-white/40 mb-6 border-b border-white/10 pb-4">
+                  {category.name}
+                </h3>
+                <ul className="flex flex-col gap-4">
+                  {category.tools.map((tool: string) => (
+                    <li key={tool} className="text-xl font-medium text-white/80">{tool}</li>
+                  ))}
+                </ul>
               </FadeIn>
             ))}
           </div>
@@ -169,20 +182,33 @@ export default async function Home() {
           </div>
           
           <div className="flex flex-col gap-16">
-            {experience.map((exp, i) => (
+            {experience.map((exp: any, i: number) => (
               <FadeIn key={i} delay={0.2}>
                 <div className="group border-l border-white/20 pl-8 relative before:absolute before:left-[-5px] before:top-2 before:w-2.5 before:h-2.5 before:bg-white before:rounded-full before:transition-transform group-hover:before:scale-150 group-hover:before:bg-accent group-hover:border-accent transition-colors">
                   <p className="text-sm font-mono text-white/50 mb-3 uppercase tracking-wider">{exp.period}</p>
                   <h3 className="text-2xl md:text-3xl font-bold mb-2">{exp.title}</h3>
                   <p className="text-accent font-medium mb-4">{exp.role}</p>
+                  
                   {exp.highlight && (
                     <p className="text-sm font-medium bg-white/5 text-white px-3 py-1 w-fit rounded-md mb-4 border border-white/10">
-                      ★ {exp.highlight}
+                      {exp.highlight}
                     </p>
                   )}
-                  <p className="text-white/70 leading-relaxed max-w-2xl">
+                  
+                  <p className="text-white/70 leading-relaxed max-w-2xl mb-6">
                     {exp.responsibilities}
                   </p>
+                  
+                  {exp.impact && (
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+                      <p className="col-span-full text-xs font-mono text-white/40 tracking-widest uppercase mb-1">Selected Impact</p>
+                      {exp.impact.map((metric: string, idx: number) => (
+                        <div key={idx} className="bg-white/5 px-4 py-3 rounded-lg border border-white/10 text-sm font-medium text-white/90">
+                          {metric}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </FadeIn>
             ))}
@@ -196,10 +222,26 @@ export default async function Home() {
           <AnimatedText 
             text={careerStory.headline} 
             as="h2"
-            className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9]"
+            className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9] whitespace-pre-line"
           />
           <FadeIn delay={0.2} className="max-w-xl text-lg md:text-xl leading-relaxed whitespace-pre-line font-medium opacity-90">
             {careerStory.narrative}
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Not Just Content Section */}
+      <section className="py-32 px-6 md:px-12 border-b border-white/10">
+        <div className="container mx-auto max-w-4xl flex flex-col items-center text-center">
+          <AnimatedText 
+            text={notJustContent.title} 
+            as="h2"
+            className="text-4xl md:text-7xl font-bold tracking-tighter mb-12 whitespace-pre-line"
+          />
+          <FadeIn delay={0.3}>
+            <p className="text-xl md:text-2xl text-white/70 whitespace-pre-line leading-relaxed font-mono">
+              {notJustContent.copy}
+            </p>
           </FadeIn>
         </div>
       </section>
@@ -209,19 +251,19 @@ export default async function Home() {
         <div className="container mx-auto">
           <div className="mb-16">
             <AnimatedText 
-              text={portfolioData.labSection.title} 
+              text={labSection.title} 
               as="h2"
-              className="text-5xl md:text-7xl font-bold tracking-tighter mb-4"
+              className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 whitespace-pre-line"
             />
             <FadeIn delay={0.2}>
               <p className="text-xl text-white/60">
-                {portfolioData.labSection.subtitle}
+                {labSection.subtitle}
               </p>
             </FadeIn>
           </div>
 
           <div className="flex flex-col border-t border-white/10 mt-8">
-            {lab.map((item, i) => (
+            {lab.map((item: any, i: number) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <Link 
                   href={`/lab/${item.slug}`} 
@@ -258,7 +300,7 @@ export default async function Home() {
           <AnimatedText 
             text={philosophy.quote} 
             as="h2"
-            className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] mb-12"
+            className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] mb-12 whitespace-pre-line"
           />
           <FadeIn delay={0.5}>
             <p className="text-lg md:text-xl font-medium opacity-70 whitespace-pre-line">
@@ -271,12 +313,12 @@ export default async function Home() {
       {/* Working Principles */}
       <section className="py-32 px-6 md:px-12">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-16">
-          {principles.map((principle, i) => (
-            <FadeIn key={principle.number} delay={i * 0.2} className="flex flex-col gap-6">
-              <span className="text-accent font-mono text-xl">{principle.number}</span>
+          {principles.map((principle: any, i: number) => (
+            <FadeIn key={principle.title} delay={i * 0.2} className="flex flex-col gap-6">
+              <span className="text-accent font-mono text-xl">0{i + 1}</span>
               <h3 className="text-2xl font-bold">{principle.title}</h3>
               <p className="text-white/60 whitespace-pre-line leading-relaxed">
-                {principle.description}
+                {principle.desc}
               </p>
             </FadeIn>
           ))}
@@ -289,7 +331,7 @@ export default async function Home() {
           <AnimatedText 
             text={contact.headline} 
             as="h2"
-            className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none mb-12"
+            className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none mb-12 whitespace-pre-line"
           />
           <FadeIn delay={0.4} className="max-w-2xl mb-16">
             <p className="text-xl md:text-2xl text-white/70 whitespace-pre-line leading-relaxed">
@@ -301,17 +343,21 @@ export default async function Home() {
             <a href={`mailto:${contact.email}`} className="px-8 py-4 bg-white text-black rounded-full font-bold uppercase tracking-wide hover:bg-accent hover:text-white transition-colors">
               EMAIL ME
             </a>
-            <a href={`https://wa.me/${contact.whatsapp.replace(/\D/g,'')}`} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
-              WHATSAPP
-            </a>
+            {contact.whatsapp && (
+              <a href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
+                WHATSAPP
+              </a>
+            )}
             {contact.linkedin && (
               <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
                 LINKEDIN
               </a>
             )}
-            <a href={contact.github} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
-              GITHUB
-            </a>
+            {contact.github && (
+              <a href={contact.github} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 rounded-full font-bold uppercase tracking-wide hover:border-white transition-colors">
+                GITHUB
+              </a>
+            )}
           </FadeIn>
         </div>
       </section>
