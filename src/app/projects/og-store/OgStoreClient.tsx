@@ -123,10 +123,10 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
           </motion.div>
           
           <motion.h1 variants={fadeInUp} className="font-space font-bold text-[34px] md:text-[58px] leading-[1.08] tracking-tight mb-6 max-w-[780px]">
-            {data.labels.heroTitle.split('percakapan')[0]}
-            <span className="text-[#9092a0]">percakapan</span>
-            {data.labels.heroTitle.split('percakapan')[1].split('closing')[0]}
-            <span className="text-[#9092a0]">closing</span>.
+            {data.labels.heroTitlePart1}
+            <span className="text-[#9092a0]">{data.labels.heroTitleHighlight1}</span>
+            {data.labels.heroTitlePart2}
+            <span className="text-[#9092a0]">{data.labels.heroTitleHighlight2}</span>.
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-[17px] text-[#9092a0] max-w-[560px] leading-relaxed mt-5">

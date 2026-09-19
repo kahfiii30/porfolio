@@ -43,7 +43,10 @@ export const ogStoreData = {
     labels: {
       backToWork: "KEMBALI KE PORTOFOLIO",
       eyebrow: "Abdul Azis Al Kahfi — Portfolio",
-      heroTitle: "Mengubah tayangan jadi percakapan, dan percakapan jadi closing.",
+      heroTitlePart1: "Mengubah tayangan jadi ",
+      heroTitleHighlight1: "percakapan",
+      heroTitlePart2: ", dan percakapan jadi ",
+      heroTitleHighlight2: "closing",
       heroDesc: "Studi kasus pengelolaan Instagram & komunikasi konversi untuk OG Store Samarinda (retail handphone), berjalan 1 tahun. Data di bawah diambil langsung dari Instagram Insight & Meta Business Suite.",
       
       aboutNum: "00 — Tentang",
@@ -119,7 +122,10 @@ export const ogStoreData = {
     labels: {
       backToWork: "BACK TO WORK",
       eyebrow: "Abdul Azis Al Kahfi — Portfolio",
-      heroTitle: "Turning impressions into conversations, and conversations into closing.",
+      heroTitlePart1: "Turning impressions into ",
+      heroTitleHighlight1: "conversations",
+      heroTitlePart2: ", and conversations into ",
+      heroTitleHighlight2: "closing",
       heroDesc: "A case study on Instagram management & conversion communication for OG Store Samarinda (mobile retail), running for 1 year. The data below is taken directly from Instagram Insights & Meta Business Suite.",
       
       aboutNum: "00 — About",
