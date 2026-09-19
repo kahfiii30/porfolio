@@ -38,10 +38,9 @@ bekerja dengan lebih cerdas?"`,
   projects: [
     {
       id: "og-store",
-      title: "OG STORE\nKONTEN DIGITAL\n& MARKETING",
-      category: "Retail Gadget • Social Media • Marketing • Creative Operations",
-      shortDescription:
-        "Mendukung eksekusi pemasaran digital dan konten untuk perusahaan ritel gadget multi-cabang di Samarinda.",
+      title: "OG STORE SAMARINDA\n8.74 jt Tayangan\n+2.740 Pengikut\n97–98% Respons",
+      category: "Social Media · Meta Ads · Conversion",
+      shortDescription: "Connecting content, paid distribution,\ncustomer conversations and conversion\nfor a multi-branch gadget retailer.",
       slug: "og-store",
       image: "/images/projects/ogstore.png",
       workedOn: ["Konten", "Kampanye", "Kreatif", "Operasional"],

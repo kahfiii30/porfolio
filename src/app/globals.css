@@ -16,8 +16,14 @@
   --color-surface: var(--surface);
   --color-light-bg: var(--light-bg);
   --color-light-fg: var(--light-fg);
+  --color-violet: #6c5ce7;
+  --color-coral: #ff6b4a;
+  
   --font-sans: var(--font-inter), var(--font-geist-sans), Arial, Helvetica, sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-space: var(--font-space-grotesk), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-plex: var(--font-plex-mono), monospace;
   
   --radius-sm: 12px;
   --radius-md: 16px;

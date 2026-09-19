@@ -38,10 +38,9 @@ work smarter?"`,
   projects: [
     {
       id: "og-store",
-      title: "OG STORE\nDIGITAL CONTENT\n& MARKETING",
-      category: "Retail Gadget • Social Media • Marketing • Creative Operations",
-      shortDescription:
-        "Supporting digital marketing and content execution for a multi-branch gadget retailer in Samarinda.",
+      title: "OG STORE SAMARINDA\n8.74M Impressions\n+2,740 Net Followers\n97–98% Response Rate",
+      category: "Social Media · Meta Ads · Conversion",
+      shortDescription: "Connecting content, paid distribution,\ncustomer conversations and conversion\nfor a multi-branch gadget retailer.",
       slug: "og-store",
       image: "/images/projects/ogstore.png",
       workedOn: ["Content", "Campaign", "Creative", "Operations"],
