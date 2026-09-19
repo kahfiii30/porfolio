@@ -56,8 +56,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </p>
           </div>
           
-          <div className="flex items-center gap-2 mt-4 md:mt-0 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
-            <span>View Case Study</span>
+          <div className="flex items-center gap-2 mt-6 md:mt-0 text-sm font-bold text-white md:text-white/60 group-hover:text-accent transition-all duration-300 transform group-hover:translate-x-2">
+            <span className="uppercase tracking-wider border-b border-transparent group-hover:border-accent pb-0.5">View Case Study</span>
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>
