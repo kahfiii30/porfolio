@@ -418,6 +418,42 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
           </div>
         </motion.section>
 
+        {/* 06 - PROOF */}
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="py-16 border-b border-[#f4f3ef]/10"
+        >
+          <div className="mb-9">
+            <motion.div variants={fadeInUp} className="font-plex text-[12px] text-[#5c5e68] tracking-[0.08em] mb-4">
+              {data.labels.proofNum}
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="font-space font-semibold text-[26px] tracking-tight">
+              {data.labels.proofTitle}
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <motion.div variants={fadeInUp} className="flex flex-col gap-3">
+              <div className="bg-[#1a1c21] rounded-lg overflow-hidden border border-[#f4f3ef]/10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/projects/og-store/evidence/proof-juli-2026.png" alt="Proof Juli 2026" className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="font-plex text-[11.5px] text-[#5c5e68] text-center uppercase tracking-wider">{data.labels.proofJuli}</div>
+            </motion.div>
+            
+            <motion.div variants={fadeInUp} className="flex flex-col gap-3">
+              <div className="bg-[#1a1c21] rounded-lg overflow-hidden border border-[#f4f3ef]/10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/projects/og-store/evidence/proof-agustus-2026.png" alt="Proof Agustus 2026" className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="font-plex text-[11.5px] text-[#5c5e68] text-center uppercase tracking-wider">{data.labels.proofAgustus}</div>
+            </motion.div>
+          </div>
+        </motion.section>
+
         {/* FOOTER */}
         <footer className="py-[64px] pb-[80px]">
           <motion.div 

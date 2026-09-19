@@ -75,7 +75,7 @@ export const ogStoreData = {
       
       convNum: "03 — Percakapan & Respons",
       convTitle: "Volume chat naik, kecepatan respons tetap tinggi",
-      convPeriod: "1–22 Agustus 2026",
+      convPeriod: "Juli 2026 (1–31) → Agustus 2026 (1–31), bulan penuh",
       funnelLabels: ["Percakapan dimulai", "Total kontak", "Kontak baru", "Kontak kembali (repeat)"],
       newContactGrowth: "Pertumbuhan kontak baru",
       responseRate: "Tingkat tanggapan harian",
@@ -92,6 +92,11 @@ export const ogStoreData = {
       
       skillsNum: "05 — Kemampuan Inti",
       skillsTitle: "Kombinasi yang jarang berdiri sendirian",
+
+      proofNum: "06 — Bukti Data",
+      proofTitle: "Data nyata. Bukan klaim sepihak.",
+      proofJuli: "Insight Juli 2026 (Sebelumnya)",
+      proofAgustus: "Insight Agustus 2026 (Saat ini)",
       
       footerCta: "Terbuka untuk kolaborasi & peluang baru",
       footerNote: "Abdul Azis Al Kahfi · WhatsApp 0858-2821-8908 · Instagram @kahfii.s\nSeluruh angka bersumber dari Instagram Insight & Meta Business Suite, diambil langsung dari akun yang dikelola. Data dapat diverifikasi via tangkapan layar asli atas permintaan."
@@ -146,7 +151,7 @@ export const ogStoreData = {
       
       convNum: "03 — Conversation & Response",
       convTitle: "Chat volume increased, response speed remained high",
-      convPeriod: "August 1–22, 2026",
+      convPeriod: "July 2026 (1–31) → August 2026 (1–31), full month",
       funnelLabels: ["Conversations started", "Total contacts", "New contacts", "Returning contacts (repeat)"],
       newContactGrowth: "New contact growth",
       responseRate: "Daily response rate",
@@ -163,6 +168,11 @@ export const ogStoreData = {
       
       skillsNum: "05 — Core Skills",
       skillsTitle: "A combination rarely standing alone",
+
+      proofNum: "06 — Data Proof",
+      proofTitle: "Real data. Not just claims.",
+      proofJuli: "July 2026 Insights (Previous)",
+      proofAgustus: "August 2026 Insights (Current)",
       
       footerCta: "Open for collaboration & new opportunities",
       footerNote: "Abdul Azis Al Kahfi · WhatsApp 0858-2821-8908 · Instagram @kahfii.s\nAll figures are sourced from Instagram Insights & Meta Business Suite, taken directly from managed accounts. Data can be verified via original screenshots upon request."
