@@ -1,23 +1,21 @@
 export const portfolioData = {
   hero: {
-    eyebrow: "Abdul Azis Al Kahfi\n— Marketing & Operations",
-    headline: "Kreatif.\nSistematis.\nBerorientasi\nHasil.",
+    eyebrow: "Abdul Azis Al Kahfi\n— Head of Social Media, OG Store Samarinda",
+    headline: "Dari konten\nsampai percakapan.",
     description:
       "Seorang pemasar digital dan pekerja kreatif yang mengeksplorasi\nirisan antara strategi, konten, AI,\notomatisasi, dan produk digital.",
     status: "Terbuka untuk Kolaborasi / Pekerjaan",
   },
   marquee: [
-    "DIGITAL MARKETING",
     "SOCIAL MEDIA",
-    "CREATIVE STRATEGY",
-    "AI",
-    "AUTOMATION",
-    "DIGITAL PRODUCTS",
-    "OPERATIONS",
+    "META ADS",
+    "CONTENT STRATEGY",
+    "CUSTOMER CONVERSATION",
+    "AI-ASSISTED WORKFLOW",
   ],
   coreCompetencies: {
     title: "OPERATOR MARKETING.\nBUKAN SEKADAR\nPEMBUAT KONTEN.",
-    subtitle: "Pendekatan saya menghubungkan konten,\ndistribusi berbayar,\npercakapan pelanggan,\ndata dan konversi.",
+    subtitle: "Pendekatan saya menghubungkan konten,\ndistribusi berbayar,\npercakapan pelanggan,\ndata dan konversi.\n\nCONTENT\n→ DISTRIBUTION\n→ CONVERSATION\n→ CONVERSION\n→ DATA\n→ ITERATION",
     groups: [
       { 
         id: "01", 
@@ -36,16 +34,16 @@ export const portfolioData = {
       { 
         id: "03", 
         name: "KONVERSI", 
-        skills: ["Percakapan Pelanggan", "Penanganan Prospek", "Tindak Lanjut WhatsApp", "Perjalanan Pelanggan", "Komunikasi Penjualan", "Dukungan Closing", "Komunikasi Produk"], 
+        skills: ["Percakapan Pelanggan", "Penanganan Prospek", "Tindak Lanjut WhatsApp", "Perjalanan Pelanggan", "Komunikasi Penjualan", "Komunikasi Produk"], 
         description: "Menghubungkan aktivitas pemasaran\ndengan percakapan pelanggan yang nyata\ndan keputusan pembelian.",
-        proof: { skill: "Dukungan Closing", label: "PENJUALAN + SOSIAL" }
+        proof: { skill: "Percakapan Pelanggan", label: "PENJUALAN + SOSIAL" }
       },
       { 
         id: "04", 
         name: "SISTEM", 
         skills: ["Otomatisasi AI", "n8n", "Hermes", "OpenClaw", "ChatGPT · Claude", "Alur Kerja Google Sheets", "Analisis Data", "Produk Digital"], 
         description: "Membangun alur kerja yang lebih cerdas\nuntuk mengurangi pekerjaan berulang\ndan meningkatkan eksekusi pemasaran.",
-        proof: { skill: "Otomatisasi AI", label: "THE LAB" }
+        proof: { skill: "Otomatisasi AI" }
       }
     ]
   },
@@ -136,7 +134,7 @@ bekerja dengan lebih cerdas?"`,
     {
       id: "wealthpilot",
       title: "WEALTHPILOT",
-      category: "Personal Project • Fintech Concept • Web Application",
+      category: "Personal Project • Konsep Fintech • Aplikasi Web",
       shortDescription:
         "Konsep aplikasi web keuangan pribadi yang dirancang untuk membantu pengguna memahami posisi keuangan mereka dengan lebih jelas.",
       slug: "wealthpilot",
@@ -146,18 +144,18 @@ bekerja dengan lebih cerdas?"`,
         "Pelacakan utang",
         "Piutang",
         "Ringkasan keuangan",
-        "Wawasan AI Pintar",
+        "Wawasan Pintar AI",
       ],
-      tech: ["GitHub", "Vercel", "Supabase", "Web Application"],
-      note: "Eksperimen produk / proyek pribadi.",
+      tech: ["GitHub", "Vercel", "Supabase", "Aplikasi Web"],
+      note: "Eksperimen / proyek produk pribadi.",
       link: "https://hitoshi.vercel.app/",
     },
     {
       id: "hitoshi-studio",
       title: "HITOSHI STUDIO",
-      category: "Creative Business Experiment • Branding • Web • Social Media",
+      category: "Eksperimen Bisnis Kreatif • Branding • Web • Social Media",
       shortDescription:
-        "Konsep layanan kreatif pribadi yang berfokus membantu individu dan bisnis kecil meningkatkan kehadiran digital mereka.",
+        "Konsep layanan kreatif pribadi yang berfokus membantu individu dan UMKM meningkatkan kehadiran digital mereka.",
       slug: "hitoshi-studio",
       areas: [
         "Desain feed Instagram",
@@ -230,7 +228,7 @@ bekerja dengan lebih cerdas?"`,
     categories: [
       { name: "MARKETING", tools: ["Meta Ads Manager", "Meta Business Suite", "Instagram", "WhatsApp Business"] },
       { name: "KONTEN & KREATIF", tools: ["Canva", "ChatGPT", "Claude"] },
-      { name: "AI & ALUR KERJA", tools: ["n8n", "Hermes", "OpenClaw"] },
+      { name: "AI & ALUR KERJA", tools: ["n8n", "Hermes — AI agent for content workflow", "OpenClaw — AI agent experiments"] },
       { name: "OPERASIONAL", tools: ["Google Sheets"] },
       { name: "PRODUK DIGITAL", tools: ["GitHub", "Vercel", "Supabase"] }
     ]
@@ -348,7 +346,8 @@ Tetapi saya lebih suka belajar dengan cara membangun sesuatu.`,
   },
   labSection: {
     title: "THE LAB.",
-    subtitle: "Hal-hal yang saya bangun untuk memahami apa yang akan datang selanjutnya."
+    subtitle: "Hal-hal yang saya bangun untuk memahami apa yang akan datang selanjutnya.",
+    sideProjectsTitle: "Side projects & concepts"
   },
   labPages: {
     aiAutomation: {

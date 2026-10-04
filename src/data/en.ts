@@ -1,23 +1,22 @@
 export const portfolioData = {
   hero: {
-    eyebrow: "Abdul Azis Al Kahfi\n— Marketing & Operations",
-    headline: "Creative.\nSystematic.\nResults\nDriven.",
+    eyebrow: "Abdul Azis Al Kahfi\n— Head of Social Media, OG Store Samarinda",
+    headline: "From content\nto conversation.",
     description:
       "Digital marketer and creative operator exploring\nthe intersection of strategy, content, AI,\nautomation, and digital products.",
     status: "Open to Work / Collaboration",
+    proofLine: "1.95M accounts reached · 1,872 customer conversations · 97–98% response rate — Aug 2026",
   },
   marquee: [
-    "DIGITAL MARKETING",
     "SOCIAL MEDIA",
-    "CREATIVE STRATEGY",
-    "AI",
-    "AUTOMATION",
-    "DIGITAL PRODUCTS",
-    "OPERATIONS",
+    "META ADS",
+    "CONTENT STRATEGY",
+    "CUSTOMER CONVERSATION",
+    "AI-ASSISTED WORKFLOW",
   ],
   coreCompetencies: {
     title: "MARKETING OPERATOR.\nNOT JUST A\nCONTENT CREATOR.",
-    subtitle: "My approach connects content,\npaid distribution,\ncustomer conversations,\ndata and conversion.",
+    subtitle: "My approach connects content,\npaid distribution,\ncustomer conversations,\ndata and conversion.\n\nCONTENT\n→ DISTRIBUTION\n→ CONVERSATION\n→ CONVERSION\n→ DATA\n→ ITERATION",
     groups: [
       { 
         id: "01", 
@@ -36,16 +35,16 @@ export const portfolioData = {
       { 
         id: "03", 
         name: "CONVERSION", 
-        skills: ["Customer Conversation", "Lead Handling", "WhatsApp Follow-up", "Customer Journey", "Sales Communication", "Closing Support", "Product Communication"], 
+        skills: ["Customer Conversation", "Lead Handling", "WhatsApp Follow-up", "Customer Journey", "Sales Communication", "Product Communication"], 
         description: "Connecting marketing activity\nwith real customer conversations\nand purchase decisions.",
-        proof: { skill: "Closing Support", label: "SALES + SOCIAL" }
+        proof: { skill: "Customer Conversation", label: "SALES + SOCIAL" }
       },
       { 
         id: "04", 
         name: "SYSTEMS", 
         skills: ["AI Automation", "n8n", "Hermes", "OpenClaw", "ChatGPT · Claude", "Google Sheets Workflow", "Data Analysis", "Digital Products"], 
         description: "Building smarter workflows\nthat reduce repetitive work\nand improve marketing execution.",
-        proof: { skill: "AI Automation", label: "THE LAB" }
+        proof: { skill: "AI Automation" }
       }
     ]
   },
@@ -54,24 +53,8 @@ export const portfolioData = {
     copy: "I work across the full path:\n\nCONTENT\n→ DISTRIBUTION\n→ CONVERSATION\n→ CONVERSION\n→ DATA\n→ ITERATION\n\nMy customer-facing background\nhelps me understand\nwhat happens after someone\nsees the content."
   },
   about: {
-    statement: "NOT JUST\nONE DISCIPLINE.",
-    description: `I started from customer-facing roles and retail,
-then gradually moved deeper into marketing,
-content, digital operations, design, and technology.
-
-Today, I enjoy working on problems where
-creative thinking meets execution.
-
-From developing campaign ideas,
-managing social media,
-organizing operational data,
-to experimenting with AI automation
-and digital products.
-
-I am especially interested in one question:
-
-"How can technology make marketing and business
-work smarter?"`,
+    statement: "WHERE I COME FROM.",
+    description: `My career didn't begin in technology. I started by selling directly to customers — in F&B, then retail electronics, where I was selected as Favorite Staff #3 across 60 branches. That taught me how people ask, hesitate, compare and decide to buy. Today I bring that understanding to content, ads and customer conversations. I'm still learning — and I prefer learning by building.`,
   },
   projects: [
     {
@@ -116,7 +99,7 @@ work smarter?"`,
     },
     {
       id: "kahfi-audit",
-      title: "MARKETING\nSHOULDN'T START\nWITH CONTENT.",
+      title: "KAHFI AUDIT MARKETING\nMARKETING\nSHOULDN'T START\nWITH CONTENT.",
       category: "Marketing Strategy • Business Diagnosis • UMKM",
       shortDescription: "Diagnosis first. Scope second. Execution third.",
       slug: "kahfi-audit",
@@ -230,7 +213,7 @@ work smarter?"`,
     categories: [
       { name: "MARKETING", tools: ["Meta Ads Manager", "Meta Business Suite", "Instagram", "WhatsApp Business"] },
       { name: "CONTENT & CREATIVE", tools: ["Canva", "ChatGPT", "Claude"] },
-      { name: "AI & WORKFLOW", tools: ["n8n", "Hermes", "OpenClaw"] },
+      { name: "AI & WORKFLOW", tools: ["n8n", "Hermes — AI agent for content workflow", "OpenClaw — AI agent experiments"] },
       { name: "OPERATIONS", tools: ["Google Sheets"] },
       { name: "BUILD / DIGITAL PRODUCTS", tools: ["GitHub", "Vercel", "Supabase"] }
     ]
@@ -239,8 +222,8 @@ work smarter?"`,
   experience: [
     {
       title: "OG STORE SAMARINDA",
-      role: "Social Media / Marketing / Digital Operations",
-      period: "Current / Recent",
+      role: "Head of Social Media",
+      period: "JULY 2025 — PRESENT",
       responsibilities:
         "Supporting digital marketing, content planning, and creative operations across multiple gadget retail branches. Managing promotional campaigns, product data organization, and visual direction.",
     },
@@ -309,6 +292,22 @@ But I prefer learning by building.`,
       subtitle: "Learning by building and shipping.",
       slug: "web-experiments",
     },
+    {
+      title: "WEALTHPILOT",
+      subtitle: "Personal finance web application concept designed to help users understand their financial position more clearly.",
+      slug: "wealthpilot",
+      link: "https://hitoshi.vercel.app/",
+      tech: ["GitHub", "Vercel", "Supabase", "Web Application"],
+      isSideProject: true
+    },
+    {
+      title: "HITOSHI STUDIO",
+      subtitle: "A personal creative service concept focused on helping individuals and small businesses improve their digital presence.",
+      slug: "hitoshi-studio",
+      link: "https://hitoshistudio.my.id",
+      tech: ["Branding", "Web", "Social Media"],
+      isSideProject: true
+    }
   ],
   philosophy: {
     quote:
@@ -348,7 +347,8 @@ But I prefer learning by building.`,
   },
   labSection: {
     title: "THE LAB.",
-    subtitle: "Things I build to understand what comes next."
+    subtitle: "Things I build to understand what comes next.",
+    sideProjectsTitle: "Side projects & concepts"
   },
   labPages: {
     aiAutomation: {
