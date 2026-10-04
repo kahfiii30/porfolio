@@ -286,6 +286,12 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
           <motion.div variants={fadeInUp} className="mt-6 p-[18px_20px] border-l-2 border-[#6c5ce7] bg-[#1a1c21] text-[14px] text-[#9092a0] max-w-[640px]">
             <span className="font-semibold text-[#f4f3ef]">{data.labels.reachWhy}</span> {data.labels.reachWhyDesc}
           </motion.div>
+          
+          {data.labels.reachFootnote && (
+            <motion.div variants={fadeInUp} className="mt-4 text-[12px] text-[#5c5e68] max-w-[640px]">
+              {data.labels.reachFootnote}
+            </motion.div>
+          )}
         </motion.section>
 
         {/* 03 - CONTENT EFFICIENCY */}
@@ -437,7 +443,8 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
           </div>
         </motion.section>
 
-        {/* 06 - CONVERSION */}
+        {/* TODO(kahfi): isi data Meta Ads Manager Juli–Agustus 2026 (Paid Distribution) */}
+        {/* 
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -447,46 +454,20 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
         >
           <div className="mb-9">
             <motion.div variants={fadeInUp} className="font-plex text-[12px] text-[#5c5e68] tracking-[0.08em] mb-4">
-              {data.labels.closingNum}
+              05 — Paid Distribution
             </motion.div>
             <motion.h2 variants={fadeInUp} className="font-space font-semibold text-[26px] tracking-tight">
-              {data.labels.closingTitle}
+              Meta Ads Performance
             </motion.h2>
           </div>
-          
-          <motion.p variants={fadeInUp} className="text-[15px] text-[#9092a0] max-w-[640px] leading-relaxed mb-10">
-            {data.labels.closingDesc}
-          </motion.p>
-
-          <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-            <div className="text-center">
-              <div className="font-space font-bold text-[54px] md:text-[72px] text-[#9092a0] opacity-50 tracking-tighter leading-none mb-2">
-                {data.metrics.closingBefore}
-              </div>
-              <div className="font-plex text-[11px] tracking-widest text-[#5c5e68]">{data.labels.before}</div>
-            </div>
-            
-            <div className="hidden md:block w-16 h-[2px] bg-[#f4f3ef]/10 relative">
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-[#f4f3ef]/20 rotate-45" />
-            </div>
-
-            <div className="text-center">
-              <div className="font-space font-bold text-[54px] md:text-[72px] text-[#6c5ce7] tracking-tighter leading-none mb-2 drop-shadow-[0_0_15px_rgba(108,92,231,0.3)]">
-                {data.metrics.closingCurrent}
-              </div>
-              <div className="font-plex text-[11px] tracking-widest text-[#5c5e68]">{data.labels.current}</div>
-            </div>
-            
-            <div className="bg-[#1a1c21] border border-[#f4f3ef]/10 p-5 rounded-lg flex flex-col items-center justify-center min-w-[180px]">
-              <div className="font-space font-bold text-[24px] text-[#f4f3ef] mb-1">{data.labels.points}</div>
-              <div className="font-plex text-[10px] text-[#5c5e68] mb-3">{data.labels.relativeImp}</div>
-              
-              <div className="w-full h-[1px] bg-[#f4f3ef]/10 mb-3" />
-              
-              <div className="font-space font-bold text-[18px] text-[#ff6b4a] mb-1">{data.labels.relativeImp2}</div>
-            </div>
-          </motion.div>
-        </motion.section>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+             <div>Ad Spend: -</div>
+             <div>CPM: -</div>
+             <div>CTR: -</div>
+             <div>Cost per Messaging Conversation: -</div>
+          </div>
+        </motion.section> 
+        */}
 
         {/* 07 - BACKGROUND */}
         <motion.section 
@@ -544,7 +525,7 @@ export default function OgStoreCaseStudyClient({ data }: { data: any }) {
               "Content Planning",
               "Copywriting",
               "Data Analytics",
-              "Customer Conversion",
+              "Customer Conversation",
               "Chat Handling",
             ].map(skill => (
               <div key={skill} className="px-4 py-2 border border-[#f4f3ef]/20 rounded-full text-[13.5px] font-medium text-[#9092a0] hover:text-[#f4f3ef] hover:border-[#f4f3ef] transition-colors">

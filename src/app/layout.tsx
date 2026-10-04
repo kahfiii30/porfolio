@@ -33,8 +33,13 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abdul Azis Al Kahfi — Head of Social Media, Digital Marketing & Meta Ads",
-  description: "Portfolio of Abdul Azis Al Kahfi, Head of Social Media based in Samarinda, working across social media strategy, digital marketing, Meta Ads, creative direction, analytics, conversion, and AI automation.",
+  title: "Abdul Azis Al Kahfi — Marketing & Operations",
+  description: "Digital marketer based in Samarinda. Connecting content, paid distribution, and customer conversations into one system.",
+  openGraph: {
+    title: "Abdul Azis Al Kahfi — Marketing & Operations",
+    description: "Digital marketer based in Samarinda. Connecting content, paid distribution, and customer conversations into one system.",
+    type: "website",
+  },
 };
 
 export default async function RootLayout({

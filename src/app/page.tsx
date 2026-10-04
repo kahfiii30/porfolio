@@ -16,8 +16,6 @@ export default async function Home() {
     projects,
     toolsConfig,
     experience,
-    careerStory,
-    notJustContent,
     lab,
     labSection,
     philosophy,
@@ -66,6 +64,13 @@ export default async function Home() {
               </div>
             </FadeIn>
           </div>
+          {hero.proofLine && (
+            <FadeIn delay={0.9} className="mt-8 max-w-5xl">
+              <p className="text-sm font-mono text-white/50 tracking-wide border-t border-white/10 pt-4">
+                {hero.proofLine}
+              </p>
+            </FadeIn>
+          )}
         </div>
       </section>
 
@@ -134,7 +139,7 @@ export default async function Home() {
         <div className="container mx-auto">
           <div className="mb-20">
             <AnimatedText 
-              text="SELECTED\nWORK." 
+              text="SELECTED WORK." 
               as="h2"
               className="text-5xl md:text-8xl font-bold tracking-tighter leading-none mb-6 whitespace-pre-line"
             />
@@ -146,7 +151,7 @@ export default async function Home() {
           </div>
 
           <div className="flex flex-col gap-32">
-            {projects.map((project: any, index: number) => (
+            {projects.filter((p: any) => p.id !== "wealthpilot" && p.id !== "hitoshi-studio").map((project: any, index: number) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
@@ -225,36 +230,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Career Story Section */}
-      <section className="py-32 px-6 md:px-12 bg-accent text-white">
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <AnimatedText 
-            text={careerStory.headline} 
-            as="h2"
-            className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9] whitespace-pre-line"
-          />
-          <FadeIn delay={0.2} className="max-w-xl text-lg md:text-xl leading-relaxed whitespace-pre-line font-medium opacity-90">
-            {careerStory.narrative}
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Not Just Content Section */}
-      <section className="py-32 px-6 md:px-12 border-b border-white/10">
-        <div className="container mx-auto max-w-4xl flex flex-col items-center text-center">
-          <AnimatedText 
-            text={notJustContent.title} 
-            as="h2"
-            className="text-4xl md:text-7xl font-bold tracking-tighter mb-12 whitespace-pre-line"
-          />
-          <FadeIn delay={0.3}>
-            <p className="text-xl md:text-2xl text-white/70 whitespace-pre-line leading-relaxed font-mono">
-              {notJustContent.copy}
-            </p>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Lab Section */}
       <section id="lab" className="py-32 px-6 md:px-12">
         <div className="container mx-auto">
@@ -272,10 +247,10 @@ export default async function Home() {
           </div>
 
           <div className="flex flex-col border-t border-white/10 mt-8">
-            {lab.map((item: any, i: number) => (
+            {lab.filter((item: any) => !item.isSideProject).map((item: any, i: number) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <Link 
-                  href={`/lab/${item.slug}`} 
+                  href={item.link || `/lab/${item.slug}`} 
                   className="group relative border-b border-white/10 py-10 md:py-16 flex justify-between items-center transition-colors duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#111111] cursor-pointer"
                   tabIndex={0}
                   aria-label={`Learn more about ${item.title}`}
@@ -300,6 +275,32 @@ export default async function Home() {
               </FadeIn>
             ))}
           </div>
+
+          {lab.some((item: any) => item.isSideProject) && (
+            <div className="mt-20">
+              <FadeIn delay={0.1}>
+                <h3 className="text-xl font-bold mb-8">{labSection.sideProjectsTitle || "Side projects & concepts"}</h3>
+              </FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {lab.filter((item: any) => item.isSideProject).map((item: any, i: number) => (
+                  <FadeIn key={item.title} delay={i * 0.1}>
+                    <Link 
+                      href={item.link || `/projects/${item.slug}`} 
+                      className="group block p-6 border border-white/10 hover:border-white/30 transition-colors bg-white/5 rounded-lg"
+                    >
+                      <h4 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{item.title}</h4>
+                      <p className="text-sm text-white/60 mb-4 line-clamp-2">{item.subtitle}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {item.tech?.map((t: string) => (
+                          <span key={t} className="text-[10px] uppercase font-mono tracking-wider border border-white/10 px-2 py-1 rounded text-white/50">{t}</span>
+                        ))}
+                      </div>
+                    </Link>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
